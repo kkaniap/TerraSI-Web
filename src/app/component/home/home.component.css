@@ -1,0 +1,23 @@
+.info{
+  margin: 2vh auto 0 auto;
+  background: #efefef;
+  width: 70vw;
+  height: auto;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1), 0 5px 5px 0 rgba(0, 0, 0, 0.1);
+}
+
+.info-title{
+  background: #56af4c;
+  width: 70vw;
+  height: 5vh;
+  color: white;
+  font-size: 3vh;
+  font-weight: bold;
+  padding: 0.5vh 0 0 0.5vw;
+  margin-bottom: 0.5vh;
+}
+
+.info-content{
+  padding: 0.5vh 0.5vw 0.5vw 0.5vh;
+  font-weight: bold;
+}
