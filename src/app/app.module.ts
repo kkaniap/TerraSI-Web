@@ -4,8 +4,6 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './component/home/home.component';
 import { TerrariumsComponent } from './component/terrariums/terrariums.component';
-import { MenuComponent } from './component/menu/menu.component';
-import { WorkspaceComponent } from './component/workspace/workspace.component';
 import {AppRoutingModule} from './app-routing/app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MainNavComponent } from './main-nav/main-nav.component';
@@ -23,8 +21,6 @@ import { MatListModule } from '@angular/material/list';
     AppComponent,
     HomeComponent,
     TerrariumsComponent,
-    MenuComponent,
-    WorkspaceComponent,
     MainNavComponent
   ],
   imports: [

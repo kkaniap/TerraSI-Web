@@ -60,6 +60,14 @@
 @media only screen and (max-width: 960px){
   .sidenav-content .mat-toolbar{
     display: flex;
+    background:#4CAF50;
+  }
+
+  .sidenav-content .mat-toolbar .logo{
+    font-family: 'Dancing Script', cursive;
+    font-weight: bold;
+    color: white;
+    font-size: 35px;
   }
 }
 
