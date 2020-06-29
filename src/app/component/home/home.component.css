@@ -1,19 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,500&display=swap');
 
 .alerts{
+  height: auto;
+  width: 70vw;
   margin: 2vh auto 0 auto;
   background: #efefef;
-  width: 70vw;
-  height: auto;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1), 0 5px 5px 0 rgba(0, 0, 0, 0.1);
 }
 
 .alerts__title{
-  background: #56af4c;
-  width: 70vw;
   height: 35px;
-  padding: 0.5vh 0 0 0.5vw;
+  width: 70vw;
   margin-bottom: 0.5vh;
+  padding: 0.5vh 0 0 0.5vw;
+  background: #56af4c;
 }
 
 .alerts__title h3{
@@ -27,15 +27,16 @@
 }
 
 .news-top{
+  display: flex;
+  height: 50vh;
+  width: 70vw;
+  margin: 5vh auto 0 auto;
   background: #efefef;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1), 0 5px 5px 0 rgba(0, 0, 0, 0.1);
-  width: 70vw;
-  height: 50vh;
-  margin: 5vh auto 0 auto;
-  display: flex;
 }
 
 .news-top-content{
+  position: relative;
   width: 100%;
 }
 
@@ -44,6 +45,7 @@ img.news-top__img{
 }
 
 .news-top__title h3{
+  margin: 1vh 0 5vh 0;
   padding: 1.5vh 1.5vw 0 1.5vw;
   font-size: 3vw;
   text-align: center;
@@ -52,13 +54,18 @@ img.news-top__img{
 }
 
 .news-top__text{
-  height: 25vh;
+  height: 25vh  ;
   padding: 0 1.5vw 0 1.5vw;
-  font-size: 1.2vw;
+  font-size: 2.5vh;
+  line-height: 4vh;
 }
 
-.news-top__footer{
-  padding: 0 1.5vw 0 1.5vw;
+.news-top__footer {
+  position: absolute;
+  top: 83%;
+  left: 2%;
+  font-size: 2vh;
+  line-height: 2.5vh;
 }
 
 @media only screen and (max-width: 960px) {
@@ -75,11 +82,49 @@ img.news-top__img{
   }
 }
 
-@media only screen and (max-width: 768px){
+@media only screen and (max-width: 768px) {
   .news-top{
     display: block;
+    height: auto;
+    width: 80vw;
+    margin: 3vh auto 0 auto;
+    background: #efefef;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1), 0 5px 5px 0 rgba(0, 0, 0, 0.1);
   }
 
+  .news-top-content{
+    position: relative;
+    width: 100%;
+    margin-bottom: 5vw;
+  }
+
+  img.news-top__img{
+    height: 80vw;
+    width: 80vw;
+  }
+
+  .news-top__title h3{
+    margin: 1vw auto 2vw auto;
+    padding: 0;
+    font-size: 7vw;
+  }
+
+  .news-top__text{
+    height: auto;
+    min-height: 40vw;
+    padding: 0 2vw 0 2vw;
+    font-size: 2vh;
+    line-height: 4vh;
+  }
+
+  .news-top__footer {
+    position: relative;
+    height: auto;
+    margin: 0 0 4vh 0;
+    padding-bottom: 3vw;
+    font-size: 2vh;
+    line-height: 2.5vh;
+  }
 }
 
 

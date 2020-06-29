@@ -7,8 +7,8 @@
 .sidenav-menu {
   width: 310px;
   background:#4CAF50;
-  border: none;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.25), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  border: none;
 }
 
 .sidenav-menu .logo {
@@ -57,7 +57,18 @@
   display: none;
 }
 
+@media only screen and (max-width: 1130px){
+  .sidenav-menu {
+    width: 27vw;
+  }
+}
+
 @media only screen and (max-width: 960px){
+
+  .sidenav-menu {
+    width: 250px;
+  }
+
   .sidenav-content .mat-toolbar{
     display: flex;
     background:#4CAF50;
@@ -70,6 +81,8 @@
     font-size: 35px;
   }
 }
+
+
 
 
 

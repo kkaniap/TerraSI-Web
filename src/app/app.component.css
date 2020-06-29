@@ -1,6 +1,6 @@
 .container{
   display: flex;
   min-height:100vh;
-  background: whitesmoke; /*alt color #e7f2e1*/
+  background: whitesmoke;
 }
 
