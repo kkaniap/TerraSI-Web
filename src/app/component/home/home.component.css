@@ -60,9 +60,7 @@ img.news-top__img{
 .news-top__text{
   flex: auto;
   padding: 0 10px;
-  font-family: sans-serif;
   font-size: 1.2vw;
-  line-height: normal;
 }
 
 .news-top__footer {
