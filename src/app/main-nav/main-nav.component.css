@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
 .sidenav-container{
   height: 100%;
@@ -6,17 +7,16 @@
 
 .sidenav-menu {
   width: 310px;
-  background:#4CAF50;
+  background:#252a37;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.25), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
   border: none;
 }
 
 .sidenav-menu .logo {
   margin: 35px 0 35px 0;
-  font-family: 'Dancing Script', cursive;
-  font-weight: bold;
+  font-family: 'East Sea Dokdo', cursive;
   color: white;
-  font-size: 70px;
+  font-size: 110px;
   text-align: center;
 }
 
@@ -26,22 +26,23 @@
 
 .sidenav-menu .mat-list-item{
   height: 70px;
-  color: white;
+  font-family: 'Open Sans', sans-serif;
+  color: #e3e3e3;
   font-size: 23px;
-  border: 1px none #66d96a;
+  border: 1px none #575757;
   border-top-style: solid;
 }
 
 .sidenav-menu .mat-list-item:hover{
-  background: #66d96a;
+  background: #797979;
 }
 
 .sidenav-menu .mat-list-item:focus{
-  background:#4CAF50;
+  background:#252a37;
 }
 
 .sidenav-menu .mat-list-item:focus:hover{
-  background:#66d96a;
+  background:#797979;
 }
 
 .sidenav-menu .mat-list-item:last-child{
@@ -50,7 +51,7 @@
 }
 
 .sidenav-content{
-  background: whitesmoke;
+  background: #e3e3e3;
 }
 
 .sidenav-content .mat-toolbar{
@@ -71,14 +72,13 @@
 
   .sidenav-content .mat-toolbar{
     display: flex;
-    background:#4CAF50;
+    background:#252a37;
   }
 
   .sidenav-content .mat-toolbar .logo{
-    font-family: 'Dancing Script', cursive;
-    font-weight: bold;
+    font-family: 'East Sea Dokdo', cursive;
     color: white;
-    font-size: 35px;
+    font-size: 65px;
   }
 }
 
