@@ -58,9 +58,27 @@
   display: none;
 }
 
+@media only screen and (min-width: 2300px){
+  .sidenav-content .mat-toolbar{
+    display: flex;
+    background:#252a37;
+    font-family: 'East Sea Dokdo', cursive;
+    font-size: 65px;
+  }
+
+  .sidenav-menu{
+    display: none;
+  }
+
+}
+
 @media only screen and (max-width: 1130px){
   .sidenav-menu {
-    width: 27vw;
+    width: 26vw;
+  }
+
+  .sidenav-menu .logo{
+    font-size: 90px;
   }
 }
 
@@ -79,6 +97,10 @@
     font-family: 'East Sea Dokdo', cursive;
     color: white;
     font-size: 65px;
+  }
+
+  .wide-menu-left, .wide-menu-right{
+    display: none;
   }
 }
 
