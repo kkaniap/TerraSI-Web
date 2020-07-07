@@ -58,12 +58,40 @@
   display: none;
 }
 
+.sidenav-content .mat-toolbar .wide-src-menu{
+  display: none;
+}
+
 @media only screen and (min-width: 2300px){
   .sidenav-content .mat-toolbar{
     display: flex;
     background:#252a37;
     font-family: 'East Sea Dokdo', cursive;
     font-size: 65px;
+  }
+
+  .sidenav-content .mat-toolbar .logo {
+    display: none;
+  }
+
+  .sidenav-content .mat-toolbar .wide-src-menu{
+    display: flex;
+    justify-content: center;
+    margin-left: 25%;
+    width: 50%;
+  }
+
+  .sidenav-content .mat-toolbar .wide-src-menu .logo{
+    display: inherit;
+  }
+
+  .sidenav-content .mat-toolbar .wide-src-menu a{
+    display: inherit;
+    margin-left: 50px;
+    font-family: 'Open Sans', sans-serif;
+    color: #e3e3e3;
+    font-size: 30px;
+    text-decoration-line: none;
   }
 
   .sidenav-menu{
@@ -99,9 +127,6 @@
     font-size: 65px;
   }
 
-  .wide-menu-left, .wide-menu-right{
-    display: none;
-  }
 }
 
 

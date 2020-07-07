@@ -22,11 +22,18 @@
         *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
+      <div class="wide-src-menu">
+        <div class="logo">
+          TerraSI
+        </div>
+          <a mat-list-item [routerLink]="''">Home</a>
+          <a mat-list-item [routerLink]="'terrariums'">Terrariums</a>
+          <a mat-list-item href="#">Logout</a>
+      </div>
       <span style="flex: 1 1 auto;"></span>
-        <a mat-list-item [routerLink]="''">Home</a>
-        <a mat-list-item [routerLink]="'terrariums'">Terrariums</a>
-      <div class="logo">TerraSI</div>
-        <a  mat-list-item href="#">Logout</a>
+      <div class="logo">
+        TerraSI
+      </div>
       <span style="flex: 1 1 auto;"></span>
     </mat-toolbar>
     <ng-content></ng-content>
