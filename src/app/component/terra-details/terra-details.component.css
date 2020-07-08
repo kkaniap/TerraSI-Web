@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+*{
+  font-family: 'Open Sans', sans-serif;
+}
+
+/*.terra-details-container{*/
+/*  background-color: red;*/
+/*}*/
+/*.terra-details-top-left{*/
+/*  background-color: green;*/
+/*}*/
+/*.terra-details-top-middle{*/
+/*  background-color: yellow;*/
+/*}*/
+/*.terra-details-top-right{*/
+/*  background-color: pink;*/
+/*}*/
+/*.terra-details-container{*/
+/*  display: flex;*/
+/*  flex-direction: column;*/
+/*}*/
+
+.terra-details-top{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 25px;
+}
+
+.terra-details-top-left{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 20%;
+}
+
+.terra-details-top-middle{
+  display: flex;
+  justify-content: center;
+  width: 55%;
+}
+
+.terra-details-top-right{
+  display: flex;
+  width: 25%;
+}
+
+.terra-details-top .terra-img{
+  height: 20vw;
+  width: 40vw;
+}
+
+.terra-details-top .robot-img{
+  height: 80px;
+  width: 75px;
+}
+
+/*toggle*/
+::ng-deep .mat-slide-toggle .mat-slide-toggle-bar,
+::ng-deep .mat-slide-toggle.mat-checked:not(.mat-disabled) .mat-slide-toggle-bar{
+  background-color: #bdbdbd;
+}
+
+::ng-deep .mat-slide-toggle .mat-slide-toggle-thumb,
+::ng-deep .mat-slide-toggle.mat-checked:not(.mat-disabled) .mat-slide-toggle-thumb{
+  background-color: #252a37;
+}
+
+/*sliders*/
+::ng-deep .mat-slider.mat-slider-vertical .mat-slider-thumb-label,
+::ng-deep .mat-slider.mat-slider-vertical .mat-slider-thumb{
+  background-color: #252a37;
+}
+
+::ng-deep .mat-slider.mat-slider-vertical .mat-slider-thumb{
+  right: -10.3px;
+}
+
+::ng-deep .mat-slider.mat-slider-vertical .mat-slider-track-background,
+::ng-deep .mat-slider.mat-slider-vertical .mat-slider-track-fill {
+  background-color: #475571;
+  width: 100%;
+}
+
+::ng-deep .mat-slider.mat-slider-vertical .mat-slider-track-wrapper,
+::ng-deep .mat-slider.mat-slider-vertical .mat-slider-track-fill{
+  width: 3px;
+}
+
+::ng-deep .mat-slider.mat-slider-vertical .mat-slider-thumb{
+  right: -10.3px;
+}
+
+
+
+
+
+
+
+
+
+
+
+

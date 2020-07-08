@@ -13,6 +13,9 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { TerraDetailsComponent } from './component/terra-details/terra-details.component';
+import {MatSliderModule} from '@angular/material/slider';
 
 
 
@@ -21,7 +24,8 @@ import { MatListModule } from '@angular/material/list';
     AppComponent,
     HomeComponent,
     TerrariumsComponent,
-    MainNavComponent
+    MainNavComponent,
+    TerraDetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -33,6 +37,8 @@ import { MatListModule } from '@angular/material/list';
     MatSidenavModule,
     MatIconModule,
     MatListModule,
+    MatSlideToggleModule,
+    MatSliderModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -6,6 +6,23 @@
   padding-left: 20px;
 }
 
+.terra-container a{
+  text-decoration: none;
+  color: black;
+}
+
+.terra-container a:visited {
+  text-decoration: none;
+}
+
+.terra-container a:hover {
+  text-decoration: none;
+}
+
+.terra-container a:active {
+  text-decoration: none;
+}
+
 .terra-item{
   display: flex;
   flex-direction: column;
