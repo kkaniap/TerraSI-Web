@@ -4,21 +4,24 @@
   font-family: 'Open Sans', sans-serif;
 }
 
-/*.terra-details-container{*/
-/*  background-color: red;*/
-/*}*/
-/*.terra-details-top-left{*/
-/*  background-color: green;*/
-/*}*/
-/*.terra-details-top-middle{*/
-/*  background-color: yellow;*/
-/*}*/
-/*.terra-details-top-right{*/
-/*  background-color: pink;*/
-/*}*/
-/*.terra-details-top-right-ico{*/
-/*  background-color: #475571;*/
-/*}*/
+.terra-details-container{
+  background-color: red;
+}
+.terra-details-top-left{
+  background-color: green;
+}
+.terra-details-top-middle{
+  background-color: yellow;
+}
+.terra-details-top-right{
+  background-color: pink;
+}
+.terra-details-top-right-slider-container{
+  background-color: #797979;
+}
+.terra-details-top-left-container{
+  background-color: darkorange;
+}
 
 .terra-details-container{
   display: flex;
@@ -34,54 +37,52 @@
 
 .terra-details-top-left{
   display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.terra-details-top-left-container{
+  display: flex;
   flex-direction: column;
-  align-items: flex-end;
-  width: 25%;
-  padding-top: 3.5vw;
+  align-items: center;
+  padding-top: 2vw;
+  padding-right: 3vw;
 }
 
 .terra-details-top-left .robot-img{
-  height: 6vw;
-  width: 6vw;
-  margin-bottom: 5px;
-}
-
-.terra-details-top-left .mat-slide-toggle{
-  margin-right: 1.7vw;
+  height: 10vw;
+  width: 10vw;
+  margin-bottom: 0.5vw;
 }
 
 .terra-details-top-left span{
-  margin-right: 0.9vw;
+  margin-top: 0.5vw;
 }
 
 .terra-details-top-middle{
   display: flex;
   justify-content: center;
-  width: 45%;
+  width: 35vw;
 }
 
 .terra-details-top-middle .terra-img{
   height: 17vw;
   width: 35vw;
-
+  margin-right: 2vw;
 }
 
 .terra-details-top-right{
   display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.terra-details-top-right-slider-container{
+  display: flex;
   flex-direction: column;
   align-items: center;
-  width: 30%;
-}
-
-.terra-details-top-right-ico{
-  height: 20%;
-  width: 100%;
-  padding: 5px 8px;
-}
-
-.terra-details-top-right-sliders{
-  height: 80%;
-  width: 100%;
+  width: 4vw;
+  padding-top: 10px;
 }
 
 /*toggle*/
@@ -94,6 +95,7 @@
 ::ng-deep .mat-slide-toggle.mat-checked:not(.mat-disabled) .mat-slide-toggle-thumb{
   background-color: #252a37;
 }
+
 
 /*sliders*/
 ::ng-deep .mat-slider.mat-slider-vertical .mat-slider-thumb-label,
@@ -124,9 +126,15 @@
   height: 100%;
   min-height: 13vw;
   max-height: 13vw;
-  min-width: 4.4vw;
-  max-width: 4.4vw;
 }
+
+@media only screen and (max-width: 1300px) {
+  .terra-details-top-right-slider-container{
+    width: 3.8vw;
+  }
+}
+
+
 
 
 
