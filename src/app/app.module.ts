@@ -18,7 +18,6 @@ import { TerraDetailsComponent } from './component/terra-details/terra-details.c
 import {MatSliderModule} from '@angular/material/slider';
 
 
-
 @NgModule({
   declarations: [
     AppComponent,

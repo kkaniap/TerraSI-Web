@@ -46,6 +46,7 @@
   flex-direction: column;
   align-items: center;
   padding-top: 2vw;
+  padding-right: 2vw;
 }
 
 .terra-details-top-left-container .robot-img{
@@ -91,6 +92,22 @@
 .terra-details-top-right-sun-icon{
   height: 2.8vw;
   width: 3vw;
+}
+
+.terra-details-top-right input{
+  width: 2.1vw;
+  height: 2vw;
+  margin-top: 5px;
+  background: #e3e3e3;
+  border: 1px solid #898888;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 0.9vw;
+}
+
+.terra-details-top-right input:focus{
+  outline: none;
+  border: 1.2px solid #898888;
 }
 
 /*toggle*/
@@ -222,6 +239,12 @@
     width: 27px;
     height: 25.2px;
   }
+
+  .terra-details-top-right input{
+    width: 20px;
+    height: 14px;
+    margin-top: 2px;
+  }
 }
 
 @media only screen and (max-width: 768px){
@@ -237,6 +260,7 @@
     width: auto;
     margin-left: 15vw;
     margin-right: 2vw;
+    margin-top: 2.5vw;
   }
 
   .terra-details-top-left-container{
@@ -244,7 +268,7 @@
   }
 
   .terra-details-top-left-container .robot-img{
-    width: 22vw;
+    width: 24vw;
     height: 23vw;
   }
 
@@ -269,6 +293,12 @@
     margin-left: 1vw;
   }
 
+  ::ng-deep .mat-slider-vertical{
+    min-height: 26vw;
+    max-height: 26vw;
+    height: 26vw;
+  }
+
   .terra-details-top-right-bulb-tear-icon{
     width: 4vw;
     height: 5vw;
@@ -279,11 +309,12 @@
     height: 5vw;
   }
 
-  ::ng-deep .mat-slider-vertical{
-    min-height: 26vw;
-    max-height: 26vw;
-    height: 26vw;
+  .terra-details-top-right input{
+    width: 4vw;
+    height: 3vw;
+    font-size: 1.5vw;
   }
+
 }
 
 
