@@ -4,24 +4,24 @@
   font-family: 'Open Sans', sans-serif;
 }
 
-.terra-details-container{
-  background-color: red;
-}
-.terra-details-top-left{
-  background-color: green;
-}
-.terra-details-top-middle{
-  background-color: yellow;
-}
-.terra-details-top-right{
-  background-color: pink;
-}
-.terra-details-top-right-ico{
-  background-color: #475571;
-}
-.terra-details-top-right-slider-container{
-  background-color: #475571;
-}
+/*.terra-details-container{*/
+/*  background-color: red;*/
+/*}*/
+/*.terra-details-top-left{*/
+/*  background-color: green;*/
+/*}*/
+/*.terra-details-top-middle{*/
+/*  background-color: yellow;*/
+/*}*/
+/*.terra-details-top-right{*/
+/*  background-color: pink;*/
+/*}*/
+/*.terra-details-top-right-ico{*/
+/*  background-color: #475571;*/
+/*}*/
+/*.terra-details-top-right-slider-container{*/
+/*  background-color: #475571;*/
+/*}*/
 
 .terra-details-container{
   display: flex;
