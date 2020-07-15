@@ -16,6 +16,7 @@ import { MatListModule } from '@angular/material/list';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { TerraDetailsComponent } from './component/terra-details/terra-details.component';
 import {MatSliderModule} from '@angular/material/slider';
+import {FormsModule} from '@angular/forms';
 
 
 @NgModule({
@@ -26,19 +27,20 @@ import {MatSliderModule} from '@angular/material/slider';
     MainNavComponent,
     TerraDetailsComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    LayoutModule,
-    MatToolbarModule,
-    MatButtonModule,
-    MatSidenavModule,
-    MatIconModule,
-    MatListModule,
-    MatSlideToggleModule,
-    MatSliderModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        LayoutModule,
+        MatToolbarModule,
+        MatButtonModule,
+        MatSidenavModule,
+        MatIconModule,
+        MatListModule,
+        MatSlideToggleModule,
+        MatSliderModule,
+        FormsModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
