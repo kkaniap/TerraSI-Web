@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { HostListener } from '@angular/core';
+
 
 @Component({
   selector: 'app-terra-details',
@@ -7,34 +9,71 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TerraDetailsComponent implements OnInit {
 
+  iconHeight: number;
+  iconUnit: string;
+  bulbWidth: number;
+  sunWidth: number;
+
   targetLightPower = 100;
   targetHumidity = 80;
   sunrise = 0;
   sunset = 0;
   sunSpeed = 0;
 
-  constructor() { }
+  constructor() {
+    this.setIconSize();
+  }
 
   ngOnInit(): void {
   }
 
+  @HostListener('window:resize', ['$event'])
+  setIconSize() {
+    if (window.innerWidth >= 2300){
+      this.iconHeight = 64.4;
+      this.bulbWidth = 48.3;
+      this.sunWidth = 69;
+      this.iconUnit = 'px';
+    }else if (window.innerWidth < 2300 && window.innerWidth >= 960){
+      this.iconHeight = 2.8;
+      this.bulbWidth = 2.1;
+      this.sunWidth = 3;
+      this.iconUnit = 'vw';
+    }else if (window.innerWidth <= 768){
+      this.iconHeight = 5;
+      this.bulbWidth = 4;
+      this.sunWidth = 5.5;
+      this.iconUnit = 'vw';
+    }
+  }
+
   fillTargetLightPower() {
-    return `clip:rect(${0.028 * (100 - this.targetLightPower)}vw,2.1vw ,2.8vw,0);`;
+    return `clip:rect(${0.028 * (100 - this.targetLightPower)}${this.iconUnit},
+    ${this.bulbWidth}${this.iconUnit},
+    ${this.iconHeight}${this.iconUnit},0);`;
   }
 
   fillTargetHumidity() {
-    return `clip:rect(${0.028 * (100 - this.targetHumidity)}vw,2.1vw ,2.8vw,0);`;
+    return `clip:rect(${0.028 * (100 - this.targetHumidity)}${this.iconUnit},
+    ${this.bulbWidth}${this.iconUnit},
+    ${this.iconHeight}${this.iconUnit},0);`;
   }
 
   fillSunrise() {
-    return `clip:rect(${0.028 * (100 - this.sunrise)}vw,3vw ,2.8vw,0);`;
+    return `clip:rect(${0.028 * (100 - this.sunrise)}${this.iconUnit},
+    ${this.sunWidth}${this.iconUnit},
+    ${this.iconHeight}${this.iconUnit},0);`;
   }
 
   fillSunset() {
-    return `clip:rect(${0.028 * (100 - this.sunset)}vw,3vw ,2.8vw,0);`;
+    return `clip:rect(${0.028 * (100 - this.sunset)}${this.iconUnit},
+    ${this.sunWidth}${this.iconUnit},
+    ${this.iconHeight}${this.iconUnit},0);`;
   }
 
   fillSunSpeed() {
-    return `clip:rect(${0.028 * (100 - this.sunSpeed)}vw,3vw ,2.8vw,0);`;
+    return `clip:rect(${0.028 * (100 - this.sunSpeed)}${this.iconUnit},
+    ${this.sunWidth}${this.iconUnit},
+    ${this.iconHeight}${this.iconUnit},0);`;
   }
 }

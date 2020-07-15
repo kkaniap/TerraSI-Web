@@ -235,7 +235,17 @@
     width: 48.3px;
   }
 
+  .terra-details-top-right-bulb-tear-icon__fill{
+    height: 64.4px;
+    width: 48.3px;
+  }
+
   .terra-details-top-right-sun-icon{
+    height: 64.4px;
+    width: 69px;
+  }
+
+  .terra-details-top-right-sun-icon__fill{
     height: 64.4px;
     width: 69px;
   }
@@ -283,7 +293,17 @@
     height: 25.2px;
   }
 
+  .terra-details-top-right-bulb-tear-icon__fill{
+    width: 18.9px;
+    height: 25.2px;
+  }
+
   .terra-details-top-right-sun-icon{
+    width: 27px;
+    height: 25.2px;
+  }
+
+  .terra-details-top-right-sun-icon__fill{
     width: 27px;
     height: 25.2px;
   }
@@ -352,7 +372,17 @@
     height: 5vw;
   }
 
+  .terra-details-top-right-bulb-tear-icon__fill{
+    width: 4vw;
+    height: 5vw;
+  }
+
   .terra-details-top-right-sun-icon{
+    width: 5.5vw;
+    height: 5vw;
+  }
+
+  .terra-details-top-right-sun-icon__fill{
     width: 5.5vw;
     height: 5vw;
   }
