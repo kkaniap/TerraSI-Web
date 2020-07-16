@@ -48,31 +48,31 @@ export class TerraDetailsComponent implements OnInit {
   }
 
   fillTargetLightPower() {
-    return `clip:rect(${0.028 * (100 - this.targetLightPower)}${this.iconUnit},
+    return `clip:rect(${(this.iconHeight / 100) * (100 - this.targetLightPower)}${this.iconUnit},
     ${this.bulbWidth}${this.iconUnit},
     ${this.iconHeight}${this.iconUnit},0);`;
   }
 
   fillTargetHumidity() {
-    return `clip:rect(${0.028 * (100 - this.targetHumidity)}${this.iconUnit},
+    return `clip:rect(${(this.iconHeight / 100) * (100 - this.targetHumidity)}${this.iconUnit},
     ${this.bulbWidth}${this.iconUnit},
     ${this.iconHeight}${this.iconUnit},0);`;
   }
 
   fillSunrise() {
-    return `clip:rect(${0.028 * (100 - this.sunrise)}${this.iconUnit},
+    return `clip:rect(${(this.iconHeight / 100) * (100 - this.sunrise)}${this.iconUnit},
     ${this.sunWidth}${this.iconUnit},
     ${this.iconHeight}${this.iconUnit},0);`;
   }
 
   fillSunset() {
-    return `clip:rect(${0.028 * (100 - this.sunset)}${this.iconUnit},
+    return `clip:rect(${(this.iconHeight / 100) * (100 - this.sunset)}${this.iconUnit},
     ${this.sunWidth}${this.iconUnit},
     ${this.iconHeight}${this.iconUnit},0);`;
   }
 
   fillSunSpeed() {
-    return `clip:rect(${0.028 * (100 - this.sunSpeed)}${this.iconUnit},
+    return `clip:rect(${(this.iconHeight / 100) * (100 - this.sunSpeed)}${this.iconUnit},
     ${this.sunWidth}${this.iconUnit},
     ${this.iconHeight}${this.iconUnit},0);`;
   }
