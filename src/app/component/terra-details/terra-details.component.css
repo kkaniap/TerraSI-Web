@@ -187,6 +187,36 @@
   width: 70px;
 }
 
+.vertical-progressbar{
+  display: flex;
+  margin-top: 10px;
+}
+
+.vertical-progressbar-ticks{
+  margin-top: -1px;
+  margin-right: 4px;
+  text-align: right;
+  font-size: 10px;
+  line-height: 12px;
+  font-family: "Roboto", sans-serif;
+}
+
+.vertical-progressbar-background{
+  display: flex;
+  flex-direction: column-reverse;
+  height: 250px;
+  width: 12px;
+  border-radius: 5px;
+  background: #e3e3e3;
+  box-shadow: 0 -5px 10px -2px rgba(0, 0, 0, 0.1), 0 4px 10px -2px rgba(0, 0, 0, 0.1);
+}
+
+.vertical-progressbar-fill{
+  width: 12px;
+  border-radius: 5px;
+  background-color: #454c66;
+}
+
 .vertical-progressbar-wrapper .thermometer-icon{
   height: 68px;
   width: 26px;
@@ -218,40 +248,13 @@
   margin-left: 10px;
 }
 
-.vertical-progressbar{
-  display: flex;
-  margin-top: 10px;
-}
 
-.vertical-progressbar-ticks{
-  margin-top: -1px;
-  margin-right: 4px;
-  text-align: right;
-  font-size: 10px;
-  line-height: 12px;
-  font-family: "Roboto", sans-serif;
-}
-
-.vertical-progressbar-background{
-  display: flex;
-  flex-direction: column-reverse;
-  height: 250px;
-  width: 12px;
-  border-radius: 5px;
-  background: #e3e3e3;
-  box-shadow: 0 -5px 10px -2px rgba(0, 0, 0, 0.1), 0 4px 10px -2px rgba(0, 0, 0, 0.1);
-}
-
-.vertical-progressbar-fill{
-  width: 12px;
-  border-radius: 5px;
-  background-color: #454c66;
-}
 
 @media only screen and (min-width: 2300px){
 
   .terra-details-top-left-container{
     padding-right: 50px;
+    padding-top: 50px;
   }
 
   .terra-details-top-left .robot-img{
@@ -296,6 +299,45 @@
   .terra-details-top-right-sun-icon__fill{
     height: 64.4px;
     width: 69px;
+  }
+
+  .vertical-progressbar{
+    margin-top: 20px;
+  }
+
+  .vertical-progressbar-wrapper{
+    margin-right: 70px;
+  }
+
+  .vertical-progressbar-wrapper .thermometer-icon{
+    margin-left: 37px;
+  }
+
+  .vertical-progressbar-wrapper .humidity-icon{
+    margin-left: 30px;
+  }
+
+  .vertical-progressbar-wrapper .brightness-icon{
+    margin-left: 20px;
+  }
+
+  .vertical-progressbar-wrapper .bulb-uva-icon,
+  .vertical-progressbar-wrapper .bulb-uvb-icon{
+    margin-left: 39px;
+  }
+
+  .vertical-progressbar-wrapper .water-container-icon{
+    margin-left: 25px;
+  }
+
+
+  .vertical-progressbar-background{
+    height: 300px;
+  }
+
+  .vertical-progressbar-ticks{
+    line-height: 15px;
+    font-size: 14px;
   }
 }
 
@@ -360,6 +402,14 @@
     width: 20px;
     height: 14px;
     margin-top: 2px;
+  }
+
+  .terra-details-center{
+    padding-top: 25px;
+  }
+
+  .vertical-progressbar-wrapper{
+    margin-right: 30px;
   }
 }
 
@@ -440,7 +490,7 @@
     height: 3vw;
     font-size: 1.5vw;
   }
-
+  
 }
 
 
