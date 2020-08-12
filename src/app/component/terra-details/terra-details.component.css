@@ -4,25 +4,6 @@
   font-family: 'Open Sans', sans-serif;
 }
 
-/*.terra-details-container{*/
-/*  background-color: red;*/
-/*}*/
-/*.terra-details-top-left{*/
-/*  background-color: green;*/
-/*}*/
-/*.terra-details-top-middle{*/
-/*  background-color: yellow;*/
-/*}*/
-/*.terra-details-top-right{*/
-/*  background-color: pink;*/
-/*}*/
-/*.terra-details-top-right-ico{*/
-/*  background-color: #475571;*/
-/*}*/
-/*.terra-details-top-right-slider-container{*/
-/*  background-color: #475571;*/
-/*}*/
-
 .terra-details-container{
   display: flex;
   flex-direction: column;
@@ -176,20 +157,22 @@
 
 .terra-details-center{
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  padding: 50px;
+  padding: 30px;
 }
 
 .vertical-progressbar-wrapper{
   display: flex;
   flex-direction: column;
-  margin-right: 3vw;
+  align-items: center;
+  margin-right: 4vw;
   width: 70px;
 }
 
 .vertical-progressbar{
   display: flex;
-  margin-top: 10px;
+  margin-top: 1vw;
 }
 
 .vertical-progressbar-ticks{
@@ -197,58 +180,56 @@
   margin-right: 4px;
   text-align: right;
   font-size: 10px;
-  line-height: 12px;
+  line-height: 15px;
   font-family: "Roboto", sans-serif;
 }
 
 .vertical-progressbar-background{
   display: flex;
   flex-direction: column-reverse;
-  height: 250px;
-  width: 12px;
+  height: 315px;
+  width: 0.7vw;
   border-radius: 5px;
   background: #e3e3e3;
   box-shadow: 0 -5px 10px -2px rgba(0, 0, 0, 0.1), 0 4px 10px -2px rgba(0, 0, 0, 0.1);
 }
 
 .vertical-progressbar-fill{
-  width: 12px;
+  width: 0.7vw;
   border-radius: 5px;
   background-color: #454c66;
 }
 
 .vertical-progressbar-wrapper .thermometer-icon{
-  height: 68px;
-  width: 26px;
-  margin-left: 23px;
+  height: 5.5vw;
+  width: 2.1vw;
+  margin-left: 32px;
 }
 
 .vertical-progressbar-wrapper .humidity-icon{
-  height: 68px;
-  width: 45px;
-  margin-left: 17px;
+  height: 5.6vw;
+  width: 4vw;
+  margin-left: 32px;
 }
 
 .vertical-progressbar-wrapper .brightness-icon{
-  height: 68px;
-  width: 68px;
-  margin-left: 6px;
+  height: 5.6vw;
+  width: 5.6vw;
+  margin-left: 32px;
 }
 
 .vertical-progressbar-wrapper .bulb-uva-icon,
 .vertical-progressbar-wrapper .bulb-uvb-icon{
-  height: 68px;
-  width: 43px;
-  margin-left: 25px;
+  height: 5.6vw;
+  width: 3.5vw;
+  margin-left: 40px;
 }
 
 .vertical-progressbar-wrapper .water-container-icon{
-  height: 68px;
-  width: 56px;
-  margin-left: 10px;
+  height: 5.6vw;
+  width: 4.6vw;
+  margin-left: 35px;
 }
-
-
 
 @media only screen and (min-width: 2300px){
 
@@ -301,50 +282,64 @@
     width: 69px;
   }
 
-  .vertical-progressbar{
-    margin-top: 20px;
+  .vertical-progressbar-wrapper{
+    margin-right: 120px;
   }
 
-  .vertical-progressbar-wrapper{
-    margin-right: 70px;
+  .vertical-progressbar-background{
+    height: 400px;
+    width: 17px;
+  }
+
+  .vertical-progressbar-ticks{
+    line-height: 19.5px;
+    font-size: 13px;
   }
 
   .vertical-progressbar-wrapper .thermometer-icon{
-    margin-left: 37px;
+    height: 127px;
+    width: 48.5px;
   }
 
   .vertical-progressbar-wrapper .humidity-icon{
-    margin-left: 30px;
+    height: 129.5px;
+    width: 92.5px;
   }
 
   .vertical-progressbar-wrapper .brightness-icon{
-    margin-left: 20px;
+    height: 129.5px;
+    width: 129.5px;
   }
 
   .vertical-progressbar-wrapper .bulb-uva-icon,
   .vertical-progressbar-wrapper .bulb-uvb-icon{
-    margin-left: 39px;
+    height: 129.5px;
+    width: 81px;
   }
 
   .vertical-progressbar-wrapper .water-container-icon{
-    margin-left: 25px;
+    height: 129.5px;
+    width: 106.5px;
   }
 
-
-  .vertical-progressbar-background{
-    height: 300px;
-  }
-
-  .vertical-progressbar-ticks{
-    line-height: 15px;
-    font-size: 14px;
-  }
 }
 
 @media only screen and (max-width: 1300px) {
 
   .terra-details-top-right-slider-container{
     width: 3.8vw;
+  }
+
+  .vertical-progressbar-wrapper{
+    margin-right: 3vw;
+  }
+
+  .vertical-progressbar-background {
+    height: 250px;
+  }
+
+  .vertical-progressbar-ticks{
+    line-height: 12px;
   }
 }
 
@@ -410,6 +405,40 @@
 
   .vertical-progressbar-wrapper{
     margin-right: 30px;
+  }
+
+  .vertical-progressbar-background{
+    width: 6.7px;
+  }
+
+  .vertical-progressbar-fill{
+    width: 6.7px;
+  }
+
+  .vertical-progressbar-wrapper .thermometer-icon{
+    height: 52.5px;
+    width: 20px;
+  }
+
+  .vertical-progressbar-wrapper .humidity-icon{
+    height: 53.5px;
+    width: 38.2px;
+  }
+
+  .vertical-progressbar-wrapper .brightness-icon{
+    height: 53.5px;
+    width: 53.5px;
+  }
+
+  .vertical-progressbar-wrapper .bulb-uva-icon,
+  .vertical-progressbar-wrapper .bulb-uvb-icon{
+    height: 53.5px;
+    width: 33.4px;
+  }
+
+  .vertical-progressbar-wrapper .water-container-icon{
+    height: 53.5px;
+    width: 44px;
   }
 }
 
@@ -491,6 +520,13 @@
     font-size: 1.5vw;
   }
 
+  .terra-details-center{
+    padding-top: 0;
+  }
+
+  .vertical-progressbar-wrapper{
+    margin-top: 50px;
+  }
 }
 
 
