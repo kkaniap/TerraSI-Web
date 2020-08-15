@@ -85,27 +85,29 @@
 
   .news-title{
     width: 75vw;
+    margin-bottom: 2vw;
   }
 
   .news-title h1{
-    font-size: 7vw;
+    font-size: 5vw;
     line-height: 1;
   }
 
   .news-content{
     width: 75vw;
     margin-top: 0;
-    font-size: 3.5vw;
+    font-size: 2.5vw;
   }
 
   .news-content h2{
     margin-bottom: 0.5vw;
-    font-size: 3.5vw;
+    font-size: 2.5vw;
   }
 }
 @media only screen and (max-width: 768px) {
   .news-title h1{
     font-size: 7vw;
+    margin-bottom: 0;
   }
 
   .news-content h2{
