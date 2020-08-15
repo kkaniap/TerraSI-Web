@@ -40,9 +40,9 @@ export class TerraDetailsComponent implements OnInit {
       this.sunWidth = 3;
       this.iconUnit = 'vw';
     }else if (window.innerWidth <= 768){
-      this.iconHeight = 5;
-      this.bulbWidth = 4;
-      this.sunWidth = 5.5;
+      this.iconHeight = 6;
+      this.bulbWidth = 5;
+      this.sunWidth = 6.5;
       this.iconUnit = 'vw';
     }
   }

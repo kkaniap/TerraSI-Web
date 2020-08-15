@@ -17,6 +17,8 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { TerraDetailsComponent } from './component/terra-details/terra-details.component';
 import {MatSliderModule} from '@angular/material/slider';
 import {FormsModule} from '@angular/forms';
+import {MatInputModule} from '@angular/material/input';
+import { NewsComponent } from './component/news/news.component';
 
 
 @NgModule({
@@ -25,21 +27,23 @@ import {FormsModule} from '@angular/forms';
     HomeComponent,
     TerrariumsComponent,
     MainNavComponent,
-    TerraDetailsComponent
+    TerraDetailsComponent,
+    NewsComponent
   ],
     imports: [
-        BrowserModule,
-        AppRoutingModule,
-        BrowserAnimationsModule,
-        LayoutModule,
-        MatToolbarModule,
-        MatButtonModule,
-        MatSidenavModule,
-        MatIconModule,
-        MatListModule,
-        MatSlideToggleModule,
-        MatSliderModule,
-        FormsModule
+      BrowserModule,
+      AppRoutingModule,
+      BrowserAnimationsModule,
+      LayoutModule,
+      MatToolbarModule,
+      MatButtonModule,
+      MatSidenavModule,
+      MatIconModule,
+      MatListModule,
+      MatSlideToggleModule,
+      MatSliderModule,
+      FormsModule,
+      MatInputModule
     ],
   providers: [],
   bootstrap: [AppComponent]

@@ -2,6 +2,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
 
+a{
+  text-decoration: none;
+  color: black;
+}
+
 .alerts{
   height: auto;
   width: 70vw;
