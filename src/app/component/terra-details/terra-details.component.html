@@ -1,131 +1,133 @@
-<div class="terra-details-container">
-  <div class="terra-details-top">
+<app-main-nav>
+  <div class="terra-details-container">
+    <div class="terra-details-top">
 
-      <div class="terra-details-top-left">
-        <div class="terra-details-top-left-container">
-          <img src="assets/terrariumsAssets/robot.png" class="robot-img" alt="turn_ON_SI">
-          <mat-slide-toggle></mat-slide-toggle>
-          <span>OFF / ON</span>
+        <div class="terra-details-top-left">
+          <div class="terra-details-top-left-container">
+            <img src="assets/terrariumsAssets/robot.png" class="robot-img" alt="turn_ON_SI">
+            <mat-slide-toggle></mat-slide-toggle>
+            <span>OFF / ON</span>
+          </div>
         </div>
+
+      <div class="terra-details-top-middle">
+        <img src="assets/terrariumsAssets/terrarium.png" class="terra-img" alt="terrarium_img">
+
+        <form class="example-form">
+          <mat-form-field>
+            <mat-label>Name</mat-label>
+            <input matInput>
+          </mat-form-field>
+        </form>
+
       </div>
 
-    <div class="terra-details-top-middle">
-      <img src="assets/terrariumsAssets/terrarium.png" class="terra-img" alt="terrarium_img">
+        <div class="terra-details-top-right">
+          <div class="terra-details-top-right-slider-container">
+            <img src="assets/terrariumsAssets/bulb.png" alt="bulb_icon" class="terra-details-top-right-bulb-tear-icon">
+            <img src="assets/terrariumsAssets/bulb-fill.png" alt="bulb_icon"  class="terra-details-top-right-bulb-tear-icon__fill" style="{{fillTargetLightPower()}}">
+            <mat-slider vertical thumbLabel [(ngModel)]="targetLightPower"></mat-slider>
+            <input label="dsa" [(ngModel)]="targetLightPower">
+          </div>
 
-      <form class="example-form">
-        <mat-form-field>
-          <mat-label>Name</mat-label>
-          <input matInput>
-        </mat-form-field>
-      </form>
+          <div class="terra-details-top-right-slider-container">
+            <img src="assets/terrariumsAssets/tear.png" alt="tear_icon" class="terra-details-top-right-bulb-tear-icon">
+            <img src="assets/terrariumsAssets/tear-fill.png" alt="tear_icon" class="terra-details-top-right-bulb-tear-icon__fill" style="{{fillTargetHumidity()}}">
+            <mat-slider vertical thumbLabel [(ngModel)]="targetHumidity"></mat-slider>
+            <input [(ngModel)]="targetHumidity">
+          </div>
 
-    </div>
+          <div class="terra-details-top-right-slider-container">
+            <img src="assets/terrariumsAssets/sunrise.png" alt="sunrise_icon" class="terra-details-top-right-sun-icon">
+            <img src="assets/terrariumsAssets/sunrise-fill.png" alt="sunrise_icon" class="terra-details-top-right-sun-icon__fill" style="{{fillSunrise()}}">
+            <mat-slider vertical thumbLabel [(ngModel)]="sunrise"></mat-slider>
+            <input [(ngModel)]="sunrise">
+          </div>
 
-      <div class="terra-details-top-right">
-        <div class="terra-details-top-right-slider-container">
-          <img src="assets/terrariumsAssets/bulb.png" alt="bulb_icon" class="terra-details-top-right-bulb-tear-icon">
-          <img src="assets/terrariumsAssets/bulb-fill.png" alt="bulb_icon"  class="terra-details-top-right-bulb-tear-icon__fill" style="{{fillTargetLightPower()}}">
-          <mat-slider vertical thumbLabel [(ngModel)]="targetLightPower"></mat-slider>
-          <input label="dsa" [(ngModel)]="targetLightPower">
-        </div>
+          <div class="terra-details-top-right-slider-container">
+            <img src="assets/terrariumsAssets/sunset.png" alt="sunset_icon" class="terra-details-top-right-sun-icon">
+            <img src="assets/terrariumsAssets/sunset-fill.png" alt="sunset_icon" class="terra-details-top-right-sun-icon__fill" style="{{fillSunset()}}">
+            <mat-slider vertical thumbLabel [(ngModel)]="sunset"></mat-slider>
+            <input [(ngModel)]="sunset">
+          </div>
 
-        <div class="terra-details-top-right-slider-container">
-          <img src="assets/terrariumsAssets/tear.png" alt="tear_icon" class="terra-details-top-right-bulb-tear-icon">
-          <img src="assets/terrariumsAssets/tear-fill.png" alt="tear_icon" class="terra-details-top-right-bulb-tear-icon__fill" style="{{fillTargetHumidity()}}">
-          <mat-slider vertical thumbLabel [(ngModel)]="targetHumidity"></mat-slider>
-          <input [(ngModel)]="targetHumidity">
-        </div>
-
-        <div class="terra-details-top-right-slider-container">
-          <img src="assets/terrariumsAssets/sunrise.png" alt="sunrise_icon" class="terra-details-top-right-sun-icon">
-          <img src="assets/terrariumsAssets/sunrise-fill.png" alt="sunrise_icon" class="terra-details-top-right-sun-icon__fill" style="{{fillSunrise()}}">
-          <mat-slider vertical thumbLabel [(ngModel)]="sunrise"></mat-slider>
-          <input [(ngModel)]="sunrise">
-        </div>
-
-        <div class="terra-details-top-right-slider-container">
-          <img src="assets/terrariumsAssets/sunset.png" alt="sunset_icon" class="terra-details-top-right-sun-icon">
-          <img src="assets/terrariumsAssets/sunset-fill.png" alt="sunset_icon" class="terra-details-top-right-sun-icon__fill" style="{{fillSunset()}}">
-          <mat-slider vertical thumbLabel [(ngModel)]="sunset"></mat-slider>
-          <input [(ngModel)]="sunset">
-        </div>
-
-        <div class="terra-details-top-right-slider-container">
-          <img src="assets/terrariumsAssets/sun-speed.png" alt="suns_speed_icon" class="terra-details-top-right-sun-icon">
-          <img src="assets/terrariumsAssets/sun-speed-fill.png" alt="suns_speed_icon" class="terra-details-top-right-sun-icon__fill" style="{{fillSunSpeed()}}">
-          <mat-slider vertical thumbLabel [(ngModel)]="sunSpeed"></mat-slider>
-          <input [(ngModel)]="sunSpeed">
-        </div>
-      </div>
-  </div>
-
-  <hr>
-
-  <div class="terra-details-center">
-
-    <div class="vertical-progressbar-wrapper">
-      <img src="assets/terrariumsAssets/thermometer.png" alt="thermometer_icon" class="thermometer-icon">
-        <div class="vertical-progressbar">
-          <div class="vertical-progressbar-ticks">60°C -<br>-<br>-<br>-<br>50°C -<br>-<br>-<br>-<br>40°C -<br>-<br>-<br>-<br>30°C -<br>-<br>-<br>-<br>20°C -<br>-<br>-<br>-<br>10°C -</div>
-          <div class="vertical-progressbar-background">
-            <div class="vertical-progressbar-fill" style="height: 65%"></div>
+          <div class="terra-details-top-right-slider-container">
+            <img src="assets/terrariumsAssets/sun-speed.png" alt="suns_speed_icon" class="terra-details-top-right-sun-icon">
+            <img src="assets/terrariumsAssets/sun-speed-fill.png" alt="suns_speed_icon" class="terra-details-top-right-sun-icon__fill" style="{{fillSunSpeed()}}">
+            <mat-slider vertical thumbLabel [(ngModel)]="sunSpeed"></mat-slider>
+            <input [(ngModel)]="sunSpeed">
           </div>
         </div>
     </div>
 
-    <div class="vertical-progressbar-wrapper">
-      <img src="assets/terrariumsAssets/tear-fill.png" alt="humidity_icon" class="humidity-icon">
-      <div class="vertical-progressbar">
-        <div class="vertical-progressbar-ticks">100% -<br>-<br>-<br>-<br>-<br>75% -<br>-<br>-<br>-<br>-<br>50% -<br>-<br>-<br>-<br>-<br>25% -<br>-<br>-<br>-<br>-<br>0% -</div>
-        <div class="vertical-progressbar-background">
-          <div class="vertical-progressbar-fill" style="height: 80%"></div>
-        </div>
-      </div>
-    </div>
+    <hr>
 
-    <div class="vertical-progressbar-wrapper">
-      <img src="assets/terrariumsAssets/brightness.png" alt="brightness_icon" class="brightness-icon">
-      <div class="vertical-progressbar">
-        <div class="vertical-progressbar-ticks">100% -<br>-<br>-<br>-<br>-<br>75% -<br>-<br>-<br>-<br>-<br>50% -<br>-<br>-<br>-<br>-<br>25% -<br>-<br>-<br>-<br>-<br>0% -</div>
-        <div class="vertical-progressbar-background">
-          <div class="vertical-progressbar-fill" style="height: 100%"></div>
-        </div>
-      </div>
-    </div>
+    <div class="terra-details-center">
 
-    <div class="vertical-progressbar-wrapper">
-      <img src="assets/terrariumsAssets/bulb-uva.png" alt="bulb-uva_icon" class="bulb-uva-icon">
-      <div class="vertical-progressbar">
-        <div class="vertical-progressbar-ticks">400nm -<br>-<br>-<br>-<br>-<br>300nm -<br>-<br>-<br>-<br>-<br>200nm -<br>-<br>-<br>-<br>-<br>100nm -<br>-<br>-<br>-<br>-<br>0nm -</div>
-        <div class="vertical-progressbar-background">
-          <div class="vertical-progressbar-fill" style="height: 90%"></div>
-        </div>
+      <div class="vertical-progressbar-wrapper">
+        <img src="assets/terrariumsAssets/thermometer.png" alt="thermometer_icon" class="thermometer-icon">
+          <div class="vertical-progressbar">
+            <div class="vertical-progressbar-ticks">60°C -<br>-<br>-<br>-<br>50°C -<br>-<br>-<br>-<br>40°C -<br>-<br>-<br>-<br>30°C -<br>-<br>-<br>-<br>20°C -<br>-<br>-<br>-<br>10°C -</div>
+            <div class="vertical-progressbar-background">
+              <div class="vertical-progressbar-fill" style="height: 65%"></div>
+            </div>
+          </div>
       </div>
-    </div>
 
-    <div class="vertical-progressbar-wrapper">
-      <img src="assets/terrariumsAssets/bulb-uvb.png" alt="bulb_uvb_icon" class="bulb-uvb-icon">
-      <div class="vertical-progressbar">
-        <div class="vertical-progressbar-ticks">400nm -<br>-<br>-<br>-<br>-<br>300nm -<br>-<br>-<br>-<br>-<br>200nm -<br>-<br>-<br>-<br>-<br>100nm -<br>-<br>-<br>-<br>-<br>0nm -</div>
-        <div class="vertical-progressbar-background">
-          <div class="vertical-progressbar-fill" style="height: 70%"></div>
+      <div class="vertical-progressbar-wrapper">
+        <img src="assets/terrariumsAssets/tear-fill.png" alt="humidity_icon" class="humidity-icon">
+        <div class="vertical-progressbar">
+          <div class="vertical-progressbar-ticks">100% -<br>-<br>-<br>-<br>-<br>75% -<br>-<br>-<br>-<br>-<br>50% -<br>-<br>-<br>-<br>-<br>25% -<br>-<br>-<br>-<br>-<br>0% -</div>
+          <div class="vertical-progressbar-background">
+            <div class="vertical-progressbar-fill" style="height: 80%"></div>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="vertical-progressbar-wrapper">
-      <img src="assets/terrariumsAssets/water-container.png" alt="water_container_icon" class="water-container-icon">
-      <div class="vertical-progressbar">
-        <div class="vertical-progressbar-ticks">100% -<br>-<br>-<br>-<br>-<br>75% -<br>-<br>-<br>-<br>-<br>50% -<br>-<br>-<br>-<br>-<br>25% -<br>-<br>-<br>-<br>-<br>0% -</div>
-        <div class="vertical-progressbar-background">
-          <div class="vertical-progressbar-fill" style="height: 75%"></div>
+      <div class="vertical-progressbar-wrapper">
+        <img src="assets/terrariumsAssets/brightness.png" alt="brightness_icon" class="brightness-icon">
+        <div class="vertical-progressbar">
+          <div class="vertical-progressbar-ticks">100% -<br>-<br>-<br>-<br>-<br>75% -<br>-<br>-<br>-<br>-<br>50% -<br>-<br>-<br>-<br>-<br>25% -<br>-<br>-<br>-<br>-<br>0% -</div>
+          <div class="vertical-progressbar-background">
+            <div class="vertical-progressbar-fill" style="height: 100%"></div>
+          </div>
         </div>
       </div>
+
+      <div class="vertical-progressbar-wrapper">
+        <img src="assets/terrariumsAssets/bulb-uva.png" alt="bulb-uva_icon" class="bulb-uva-icon">
+        <div class="vertical-progressbar">
+          <div class="vertical-progressbar-ticks">400nm -<br>-<br>-<br>-<br>-<br>300nm -<br>-<br>-<br>-<br>-<br>200nm -<br>-<br>-<br>-<br>-<br>100nm -<br>-<br>-<br>-<br>-<br>0nm -</div>
+          <div class="vertical-progressbar-background">
+            <div class="vertical-progressbar-fill" style="height: 90%"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="vertical-progressbar-wrapper">
+        <img src="assets/terrariumsAssets/bulb-uvb.png" alt="bulb_uvb_icon" class="bulb-uvb-icon">
+        <div class="vertical-progressbar">
+          <div class="vertical-progressbar-ticks">400nm -<br>-<br>-<br>-<br>-<br>300nm -<br>-<br>-<br>-<br>-<br>200nm -<br>-<br>-<br>-<br>-<br>100nm -<br>-<br>-<br>-<br>-<br>0nm -</div>
+          <div class="vertical-progressbar-background">
+            <div class="vertical-progressbar-fill" style="height: 70%"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="vertical-progressbar-wrapper">
+        <img src="assets/terrariumsAssets/water-container.png" alt="water_container_icon" class="water-container-icon">
+        <div class="vertical-progressbar">
+          <div class="vertical-progressbar-ticks">100% -<br>-<br>-<br>-<br>-<br>75% -<br>-<br>-<br>-<br>-<br>50% -<br>-<br>-<br>-<br>-<br>25% -<br>-<br>-<br>-<br>-<br>0% -</div>
+          <div class="vertical-progressbar-background">
+            <div class="vertical-progressbar-fill" style="height: 75%"></div>
+          </div>
+        </div>
+      </div>
+
     </div>
 
   </div>
-
-</div>
+</app-main-nav>
 
 
 
