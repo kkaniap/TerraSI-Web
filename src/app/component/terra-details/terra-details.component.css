@@ -553,14 +553,14 @@
   }
 
   .terra-details-top-right-sun-icon__fill{
-    width: 6.5vw;
-    height: 6vw;
+    width: 56px;
+    height: 53.5px;
   }
 
   .terra-details-top-right input{
-    width: 29px;
-    height: 16.5px;
-    font-size: 10px;
+    width: 35px;
+    height: 22px;
+    font-size: 12px;
   }
 
   .terra-details-center{

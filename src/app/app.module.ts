@@ -21,8 +21,7 @@ import {MatInputModule} from '@angular/material/input';
 import { NewsComponent } from './component/news/news.component';
 import { LoginComponent } from './component/login/login.component';
 import {MatFormFieldModule} from '@angular/material/form-field';
-
-
+import {MatExpansionModule} from '@angular/material/expansion';
 
 @NgModule({
   declarations: [
@@ -48,7 +47,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
       MatSliderModule,
       FormsModule,
       MatInputModule,
-      MatFormFieldModule
+      MatFormFieldModule,
+      MatExpansionModule
     ],
   providers: [],
   bootstrap: [AppComponent]

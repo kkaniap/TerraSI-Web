@@ -1,37 +1,72 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
-
 a{
   text-decoration: none;
   color: black;
 }
 
 .alerts{
-  height: auto;
+  display: flex;
+  justify-content: center;
+  margin-top: 2vw;
+}
+
+.mat-expansion-panel{
   width: 70vw;
-  margin: 2vh auto 0 auto;
-  background: #efefef;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1), 0 5px 5px 0 rgba(0, 0, 0, 0.1);
 }
 
-.alerts__title{
-  height: 35px;
-  width: 70vw;
-  margin-bottom: 0.5vh;
-  padding: 4px 0 0 6px;
-  background: #252a37;
+.mat-expansion-panel-header{
+  background: #efefef;
 }
 
-.alerts__title h3{
-  font-family: 'Open Sans', sans-serif;
-  color: white;
-  font-size: 21px;
+::ng-deep .mat-expansion-panel-header:focus{
+  background: #efefef!important;
 }
 
-.alerts__content{
-  padding: 0.5vh 0.5vw 0.5vw 0.5vh;
-  font-family: 'Lato', sans-serif;
+::ng-deep .mat-expansion-indicator::after{
+  color: #252a37;
+}
+
+.mat-expansion-panel-header-title{
+  font-size: 20px;
+}
+
+::ng-deep .mat-expansion-panel-body{
+  padding: 0!important;
+}
+.mat-expansion-panel-item{
+  display: flex;
+  height: 48px;
+  background: #faf9f9;
+  border-top: 1px solid #dddcdc;
+}
+
+.mat-expansion-panel-item__nr{
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+  font-size: 18px;
+}
+
+.mat-expansion-panel-item__msg{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-left: 8px;
+  font-size: 15px;
+}
+
+.mat-expansion-panel-item__ico{
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+  transform: scale(1.2);
+}
+
+.mat-expansion-panel-item__ico:hover{
+  transform: scale(1.5);
 }
 
 .news-top{

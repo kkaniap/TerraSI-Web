@@ -1,12 +1,46 @@
 <app-main-nav>
 
+
+
 <div class="alerts">
-  <div class="alerts__title">
-    <h3>Alerts</h3>
-  </div>
-  <div class="alerts__content">
-    You don't have any alerts :)
-  </div>
+  <mat-expansion-panel (opened)="panelOpenState = true"
+                       (closed)="panelOpenState = false">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Alerts
+      </mat-panel-title>
+      <mat-panel-description>
+        You don't have any alerts :)
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <div class="mat-expansion-panel-item">
+      <div class="mat-expansion-panel-item__nr">1.</div>
+      <div class="mat-expansion-panel-item__msg">
+        Terrarium 1 - Low water level in the container
+      </div>
+      <div class="mat-expansion-panel-item__ico">
+        <img src="assets/homeAssets/arrow_forward.svg" alt="arrow_icon">
+      </div>
+    </div>
+    <div class="mat-expansion-panel-item">
+      <div class="mat-expansion-panel-item__nr">2.</div>
+      <div class="mat-expansion-panel-item__msg">
+        Terrarium 1 - Low humidity level in the terrarium
+      </div>
+      <div class="mat-expansion-panel-item__ico">
+        <img src="assets/homeAssets/arrow_forward.svg" alt="arrow_icon">
+      </div>
+    </div>
+    <div class="mat-expansion-panel-item">
+      <div class="mat-expansion-panel-item__nr">3.</div>
+      <div class="mat-expansion-panel-item__msg">
+        Terrarium 2 - Terrarium is overheated
+      </div>
+      <div class="mat-expansion-panel-item__ico">
+        <img src="assets/homeAssets/arrow_forward.svg" alt="arrow_icon">
+      </div>
+    </div>
+  </mat-expansion-panel>
 </div>
 
 <a [routerLink]="'news/1'">
