@@ -12,6 +12,7 @@ export class TerraDetailsComponent implements OnInit {
   iconHeight: number;
   iconUnit: string;
   bulbWidth: number;
+  tearWidth: number;
   sunWidth: number;
 
   targetLightPower = 100;
@@ -32,18 +33,21 @@ export class TerraDetailsComponent implements OnInit {
     if (window.innerWidth >= 2300){
       this.iconHeight = 64.4;
       this.bulbWidth = 48.3;
+      this.tearWidth = 48.3;
       this.sunWidth = 69;
       this.iconUnit = 'px';
     }else if (window.innerWidth < 2300 && window.innerWidth >= 960){
       this.iconHeight = 2.8;
       this.bulbWidth = 2.1;
+      this.tearWidth = 2.1;
       this.sunWidth = 3;
       this.iconUnit = 'vw';
     }else if (window.innerWidth <= 768){
-      this.iconHeight = 6;
-      this.bulbWidth = 5;
-      this.sunWidth = 6.5;
-      this.iconUnit = 'vw';
+      this.iconHeight = 53.5;
+      this.bulbWidth = 33.5;
+      this.tearWidth = 38.2;
+      this.sunWidth = 56;
+      this.iconUnit = 'px';
     }
   }
 
@@ -55,7 +59,7 @@ export class TerraDetailsComponent implements OnInit {
 
   fillTargetHumidity() {
     return `clip:rect(${(this.iconHeight / 100) * (100 - this.targetHumidity)}${this.iconUnit},
-    ${this.bulbWidth}${this.iconUnit},
+    ${this.tearWidth}${this.iconUnit},
     ${this.iconHeight}${this.iconUnit},0);`;
   }
 

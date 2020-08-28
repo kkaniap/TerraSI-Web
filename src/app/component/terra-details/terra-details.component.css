@@ -94,12 +94,14 @@
   padding-top: 10px;
 }
 
-.terra-details-top-right-bulb-tear-icon{
+.terra-details-top-right-bulb-icon,
+.terra-details-top-right-tear-icon{
   height: 2.8vw;
   width: 2.1vw;
 }
 
-.terra-details-top-right-bulb-tear-icon__fill{
+.terra-details-top-right-bulb-icon_fill,
+.terra-details-top-right-tear-icon_fill{
   position: absolute;
   height: 2.8vw;
   width: 2.1vw;
@@ -147,10 +149,6 @@
 ::ng-deep .mat-slider.mat-slider-vertical .mat-slider-thumb-label,
 ::ng-deep .mat-slider.mat-slider-vertical .mat-slider-thumb{
   background-color: #252a37;
-}
-
-::ng-deep .mat-slider.mat-slider-vertical .mat-slider-thumb{
-  right: -10.3px;
 }
 
 ::ng-deep .mat-slider.mat-slider-vertical .mat-slider-thumb{
@@ -276,17 +274,19 @@
     margin-right: 46px;
   }
 
+  .terra-details-top-middle .mat-form-field {
+    width: 320px;
+  }
+
   .terra-details-top-right-slider-container{
     width: 92px;
     padding-top: 10px;
   }
 
-  .terra-details-top-right-bulb-tear-icon{
-    height: 64.4px;
-    width: 48.3px;
-  }
-
-  .terra-details-top-right-bulb-tear-icon__fill{
+  .terra-details-top-right-bulb-icon,
+  .terra-details-top-right-tear-icon,
+  .terra-details-top-right-bulb-icon_fill,
+  .terra-details-top-right-tear-icon_fill{
     height: 64.4px;
     width: 48.3px;
   }
@@ -299,6 +299,12 @@
   .terra-details-top-right-sun-icon__fill{
     height: 64.4px;
     width: 69px;
+  }
+
+  ::ng-deep .mat-slider-vertical{
+    height: 100%;
+    min-height: 285px;
+    max-height: 285px;
   }
 
   .vertical-progressbar-wrapper{
@@ -388,16 +394,20 @@
     margin-right: 18px;
   }
 
+  .terra-details-top-middle .mat-form-field {
+    margin-top: 5px;
+    width: 142px;
+  }
+
   .terra-details-top-right-slider-container{
     width: 40px;
     padding-top: 10px;
   }
-  .terra-details-top-right-bulb-tear-icon{
-    width: 18.9px;
-    height: 25.2px;
-  }
 
-  .terra-details-top-right-bulb-tear-icon__fill{
+  .terra-details-top-right-bulb-icon,
+  .terra-details-top-right-tear-icon,
+  .terra-details-top-right-bulb-icon_fill,
+  .terra-details-top-right-tear-icon_fill{
     width: 18.9px;
     height: 25.2px;
   }
@@ -470,11 +480,9 @@
 
   .terra-details-top-left{
     order:1;
-    justify-content: flex-end;
-    width: auto;
-    margin-left: 15vw;
-    margin-right: 2vw;
-    margin-top: 2.5vw;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 2vw;
   }
 
   .terra-details-top-left-container{
@@ -482,8 +490,8 @@
   }
 
   .terra-details-top-left-container .robot-img{
-    width: 24vw;
-    height: 23vw;
+    width: 35vw;
+    height: 34vw;
   }
 
   .terra-details-top-middle{
@@ -497,35 +505,51 @@
     margin-right: 0;
   }
 
+  .terra-details-top-middle .mat-form-field {
+    margin-top: 0;
+    width: 40vw;
+  }
+
   .terra-details-top-right{
     order: 2;
-    width: auto;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
   }
 
   .terra-details-top-right-slider-container{
     width: 8vw;
-    margin-left: 1vw;
   }
 
   ::ng-deep .mat-slider-vertical{
-    min-height: 26vw;
-    max-height: 26vw;
-    height: 26vw;
+    min-height: 250px;
+    max-height: 250px;
+    height: 250px;
   }
 
-  .terra-details-top-right-bulb-tear-icon{
-    width: 5vw;
-    height: 6vw;
+  ::ng-deep .mat-slider.mat-slider-vertical .mat-slider-track-wrapper,
+  ::ng-deep .mat-slider.mat-slider-vertical .mat-slider-track-fill{
+    width: 4px;
   }
 
-  .terra-details-top-right-bulb-tear-icon__fill{
-    width: 5vw;
-    height: 6vw;
+  ::ng-deep .mat-slider.mat-slider-vertical .mat-slider-thumb{
+    right: -11.3px;
+  }
+
+  .terra-details-top-right-bulb-icon,
+  .terra-details-top-right-bulb-icon_fill {
+    height: 53.5px;
+    width: 33.5px;
+  }
+
+  .terra-details-top-right-tear-icon,
+  .terra-details-top-right-tear-icon_fill{
+    height: 53.5px;
+    width: 38.2px;
   }
 
   .terra-details-top-right-sun-icon{
-    width: 6.5vw;
-    height: 6vw;
+    width: 56px;
+    height: 53.5px;
   }
 
   .terra-details-top-right-sun-icon__fill{
@@ -534,9 +558,9 @@
   }
 
   .terra-details-top-right input{
-    width: 4vw;
-    height: 3vw;
-    font-size: 1.5vw;
+    width: 29px;
+    height: 16.5px;
+    font-size: 10px;
   }
 
   .terra-details-center{
