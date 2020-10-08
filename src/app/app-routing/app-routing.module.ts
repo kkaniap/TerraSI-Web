@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 import {TerrariumsComponent} from '../component/terrariums/terrariums.component';
 import {HomeComponent} from '../component/home/home.component';
@@ -8,9 +8,9 @@ import {LoginComponent} from '../component/login/login.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
-  {path: 'terrariums', component: TerrariumsComponent },
+  {path: 'terrariums', component: TerrariumsComponent},
   {path: 'terrariums/1', component: TerraDetailsComponent},
-  {path: 'news/1', component: NewsComponent},
+  {path: 'news/:id', component: NewsComponent},
   {path: 'login', component: LoginComponent}
 ];
 
@@ -20,4 +20,5 @@ const routes: Routes = [
 })
 
 
-export class AppRoutingModule { }
+export class AppRoutingModule {
+}

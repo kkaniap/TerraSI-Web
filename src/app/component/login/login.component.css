@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&display=swap');
 
-.login-container{
+.login-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -10,7 +10,7 @@
   background: #252a37;
 }
 
-.login-panel{
+.login-panel {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -21,7 +21,7 @@
 }
 
 /*input styles*/
-::ng-deep .mat-form-field{
+::ng-deep .mat-form-field {
   font-size: 1vw;
 }
 
@@ -37,120 +37,121 @@
   background-color: #252a37 !important;
 }
 
-::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex{
+::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex {
   align-items: center;
   background: whitesmoke;
   width: 17vw;
   height: 3.5vw;
 }
 
-.mat-form-field button{
+.mat-form-field button {
   margin-top: -0.4vw;
 }
 
-.login-panel .submit-button{
+.login-panel .submit-button {
   width: 17vw;
   height: 3vw;
   font-size: 1vw;
   background: whitesmoke;
 }
 
-.logo{
+.logo {
   margin-bottom: 2.5vw;
   font-family: 'East Sea Dokdo', cursive;
   color: white;
   font-size: 8vw;
 }
 
-@media only screen and (min-width: 2300px){
-  .login-panel{
+@media only screen and (min-width: 2300px) {
+  .login-panel {
     width: 552px;
     height: 575px;
   }
 
-  ::ng-deep .mat-form-field{
+  ::ng-deep .mat-form-field {
     font-size: 25px;
   }
 
-  ::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex{
+  ::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex {
     width: 391px;
     height: 80px;
   }
 
-  .mat-form-field button{
+  .mat-form-field button {
     margin-top: -19px;
   }
-  .login-panel .submit-button{
+
+  .login-panel .submit-button {
     width: 391px;
     height: 80px;
     font-size: 23px;
   }
 
-  .logo{
+  .logo {
     margin-bottom: 56px;
     font-size: 179px;
   }
 }
 
 @media only screen and (max-width: 960px) {
-  .login-panel{
+  .login-panel {
     width: 36vw;
     height: 37vw;
     padding-top: 3vw;
   }
 
-  ::ng-deep .mat-form-field{
+  ::ng-deep .mat-form-field {
     font-size: 1.5vw;
   }
 
-  ::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex{
+  ::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex {
     width: 25vw;
     height: 5.5vw;
   }
 
-  .mat-form-field button{
+  .mat-form-field button {
     margin-top: -0.7vw;
   }
 
-  .login-panel .submit-button{
+  .login-panel .submit-button {
     width: 25vw;
     height: 5.5vw;
     font-size: 2vw;
   }
 
-  .logo{
+  .logo {
     margin-bottom: 4vw;
     font-size: 13.5vw;
   }
 }
 
 @media only screen and (max-width: 768px) {
-  .login-panel{
+  .login-panel {
     width: 70vw;
     height: 80vw;
     padding-top: 10vw;
   }
 
-  ::ng-deep .mat-form-field{
+  ::ng-deep .mat-form-field {
     font-size: 3vw;
   }
 
-  ::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex{
+  ::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex {
     width: 55vw;
     height: 11vw;
   }
 
-  .mat-form-field button{
+  .mat-form-field button {
     margin-top: -1.3vw;
   }
 
-  .login-panel .submit-button{
+  .login-panel .submit-button {
     width: 55vw;
     height: 11vw;
     font-size: 4vw;
   }
 
-  .logo{
+  .logo {
     margin-bottom: 7vw;
     font-size: 25vw;
   }

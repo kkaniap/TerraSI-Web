@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { HostListener } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {HostListener} from '@angular/core';
 
 
 @Component({
@@ -30,19 +30,19 @@ export class TerraDetailsComponent implements OnInit {
 
   @HostListener('window:resize', ['$event'])
   setIconSize() {
-    if (window.innerWidth >= 2300){
+    if (window.innerWidth >= 2300) {
       this.iconHeight = 64.4;
       this.bulbWidth = 48.3;
       this.tearWidth = 48.3;
       this.sunWidth = 69;
       this.iconUnit = 'px';
-    }else if (window.innerWidth < 2300 && window.innerWidth >= 960){
+    } else if (window.innerWidth < 2300 && window.innerWidth >= 960) {
       this.iconHeight = 2.8;
       this.bulbWidth = 2.1;
       this.tearWidth = 2.1;
       this.sunWidth = 3;
       this.iconUnit = 'vw';
-    }else if (window.innerWidth <= 768){
+    } else if (window.innerWidth <= 768) {
       this.iconHeight = 53.5;
       this.bulbWidth = 33.5;
       this.tearWidth = 38.2;

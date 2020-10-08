@@ -1,125 +1,92 @@
 <app-main-nav>
 
 
-
-<div class="alerts">
-  <mat-expansion-panel (opened)="panelOpenState = true"
-                       (closed)="panelOpenState = false">
-    <mat-expansion-panel-header>
-      <mat-panel-title>
-        Alerts
-      </mat-panel-title>
-      <mat-panel-description>
-        You have 3 messages
-      </mat-panel-description>
-    </mat-expansion-panel-header>
-    <div class="mat-expansion-panel-item">
-      <div class="mat-expansion-panel-item__nr">1.</div>
-      <div class="mat-expansion-panel-item__msg">
-        Terrarium 1 - Low water level in the container
+  <div class="alerts">
+    <mat-expansion-panel (opened)="panelOpenState = true"
+                         (closed)="panelOpenState = false">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Alerts
+        </mat-panel-title>
+        <mat-panel-description>
+          You have 3 messages
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <div class="mat-expansion-panel-item">
+        <div class="mat-expansion-panel-item__nr">1.</div>
+        <div class="mat-expansion-panel-item__msg">
+          Terrarium 1 - Low water level in the container
+        </div>
+        <div class="mat-expansion-panel-item__ico">
+          <img src="assets/homeAssets/arrow_forward.svg" alt="arrow_icon">
+        </div>
       </div>
-      <div class="mat-expansion-panel-item__ico">
-        <img src="assets/homeAssets/arrow_forward.svg" alt="arrow_icon">
+      <div class="mat-expansion-panel-item">
+        <div class="mat-expansion-panel-item__nr">2.</div>
+        <div class="mat-expansion-panel-item__msg">
+          Terrarium 1 - Low humidity level in the terrarium
+        </div>
+        <div class="mat-expansion-panel-item__ico">
+          <img src="assets/homeAssets/arrow_forward.svg" alt="arrow_icon">
+        </div>
       </div>
-    </div>
-    <div class="mat-expansion-panel-item">
-      <div class="mat-expansion-panel-item__nr">2.</div>
-      <div class="mat-expansion-panel-item__msg">
-        Terrarium 1 - Low humidity level in the terrarium
+      <div class="mat-expansion-panel-item">
+        <div class="mat-expansion-panel-item__nr">3.</div>
+        <div class="mat-expansion-panel-item__msg">
+          Terrarium 2 - Terrarium is overheated
+        </div>
+        <div class="mat-expansion-panel-item__ico">
+          <img src="assets/homeAssets/arrow_forward.svg" alt="arrow_icon">
+        </div>
       </div>
-      <div class="mat-expansion-panel-item__ico">
-        <img src="assets/homeAssets/arrow_forward.svg" alt="arrow_icon">
-      </div>
-    </div>
-    <div class="mat-expansion-panel-item">
-      <div class="mat-expansion-panel-item__nr">3.</div>
-      <div class="mat-expansion-panel-item__msg">
-        Terrarium 2 - Terrarium is overheated
-      </div>
-      <div class="mat-expansion-panel-item__ico">
-        <img src="assets/homeAssets/arrow_forward.svg" alt="arrow_icon">
-      </div>
-    </div>
-  </mat-expansion-panel>
-</div>
-
-<a [routerLink]="'news/1'">
-  <div class="news-top">
-    <picture>
-      <source media="(max-width: 768px)" srcset="../../../assets/homeAssets/logo_mobile.png">
-      <img src="../../../assets/homeAssets/logo.png" class="news-top__img" alt="company_logo">
-    </picture>
-    <div class="news-top-content">
-      <div class="news-top__title">
-        <h2>We've started working together</h2>
-      </div>
-      <div class="news-top__text">
-        We are pleased to inform you that we have started cooperation with ReptileSupply.
-        This will contribute to better quality of our terrariums.
-        If you want to know more about our cooperation, please visit this post.
-      </div>
-      <div class="news-top__footer">
-        Patryk Kania<br>
-        Dec 02, 2019  | 6 min read
-      </div>
-    </div>
-  </div>
-</a>
-
-<div class="news-bottom-container">
-
-  <div class="news-bottom-item">
-    <img src="../../../assets/homeAssets/save_money.png" alt="news_logo">
-    <div class="news-bottom-item-content">
-      <div class="news-bottom-item__title">
-        <h2>How to save money with TerraSI</h2>
-      </div>
-      <div class="news-bottom-item__text">
-        Do you want to know how to save money by buying more ?
-        You can get up to -25% discount.
-        Just visit this post.
-      </div>
-      <div class="news-bottom-item__footer">
-        Patryk Kania<br>
-        Mar 28, 2020  | 5 min read
-      </div>
-    </div>
+    </mat-expansion-panel>
   </div>
 
-  <div class="news-bottom-item">
-    <img src="../../../assets/homeAssets/terra.png" alt="news_logo">
-    <div class="news-bottom-item-content">
-      <div class="news-bottom-item__title">
-        <h2>What I'm working on</h2>
-      </div>
-      <div class="news-bottom-item__text">
-        You will find details about the module plans that you can install to your terrarium and what changes I plan on the website
-      </div>
-      <div class="news-bottom-item__footer">
-        Patryk Kania<br>
-        Feb 15, 2020  | 10 min read
-      </div>
-    </div>
-  </div>
-
-  <div class="news-bottom-item">
-    <img src="../../../assets/homeAssets/UElogo.png" alt="news_logo">
-    <div class="news-bottom-item-content">
-      <div class="news-bottom-item__title">
-        <h2>It's my BA thesis</h2>
-      </div>
-      <div class="news-bottom-item__text">
-        Where did the idea come from ?<br>
-        How does it look like at my university ?<br>
-        And what's next ?<br><br>
-        Answers to these questions and more are in the post
-      </div>
-      <div class="news-bottom-item__footer">
-        Patryk Kania<br>
-        Jan 10, 2020  | 10 min read
+  <a [routerLink]="'news/' + lastNews.id"  *ngIf="lastNews != null">
+    <div class="news-top">
+      <picture>
+        <source media="(max-width: 768px)" srcset="{{lastNews.imgThumbnailMobile}}">
+        <img src="{{lastNews.imgThumbnail}}" class="news-top__img" alt="company_logo">
+      </picture>
+      <div class="news-top-content">
+        <div class="news-top__title">
+          <h2>{{lastNews.title}}</h2>
+        </div>
+        <div class="news-top__text">
+          <div [innerHTML]="lastNews.shortContent"></div>
+        </div>
+        <div class="news-top__footer">
+          {{lastNews.createUser}}<br>
+          {{lastNews.createDate | date}} | {{lastNews.readTime}} min read
+        </div>
       </div>
     </div>
-  </div>
+  </a>
 
-</div>
-  </app-main-nav>
+  <div class="news-bottom-container">
+    <ng-container *ngIf="newsList != null">
+      <ng-container *ngFor="let news of newsList._embedded.newsList.reverse()">
+        <a [routerLink]="'news/' + news.id">
+          <div class="news-bottom-item">
+            <picture>
+              <source media="(max-width: 768px)" srcset="{{news.imgThumbnailMobile}}">
+              <img src="{{news.imgThumbnail}}" class="news-top__img" alt="company_logo">
+            </picture>
+            <div class="news-bottom-item-content">
+              <div class="news-bottom-item__title">
+                <h2>{{news.title}}</h2>
+              </div>
+              <div class="news-bottom-item__text">
+                <div [innerHTML]="news.shortContent"></div>
+              </div>
+              <div class="news-bottom-item__footer">
+                {{news.createUser}}<br>
+                {{news.createDate | date}} | {{news.readTime}} min read
+              </div>
+            </div>
+          </div>
+        </a>
+      </ng-container>
+    </ng-container>
+  </div>
+</app-main-nav>

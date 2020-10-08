@@ -1,15 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
-*{
+* {
   font-family: 'Open Sans', sans-serif;
 }
 
-.terra-details-container{
+.terra-details-container {
   display: flex;
   flex-direction: column;
 }
 
-.terra-details-container hr{
+.terra-details-container hr {
   width: 90%;
   height: 1.5px;
   margin-top: 5px;
@@ -18,20 +18,20 @@
   border-radius: 5px;
 }
 
-.terra-details-top{
+.terra-details-top {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   margin-top: 25px;
 }
 
-.terra-details-top-left{
+.terra-details-top-left {
   display: flex;
   justify-content: flex-end;
   width: 100%;
 }
 
-.terra-details-top-left-container{
+.terra-details-top-left-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -39,17 +39,17 @@
   padding-right: 2vw;
 }
 
-.terra-details-top-left-container .robot-img{
+.terra-details-top-left-container .robot-img {
   height: 10vw;
   width: 10vw;
   margin-bottom: 0.5vw;
 }
 
-.terra-details-top-left span{
+.terra-details-top-left span {
   margin-top: 0.5vw;
 }
 
-.terra-details-top-middle{
+.terra-details-top-middle {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -57,7 +57,7 @@
   width: 40vw;
 }
 
-.terra-details-top-middle .terra-img{
+.terra-details-top-middle .terra-img {
   height: 17vw;
   width: 35vw;
 }
@@ -76,17 +76,17 @@
   background-color: #252a37 !important;;
 }
 
-.mat-input-element{
+.mat-input-element {
   caret-color: #252a37;
 }
 
-.terra-details-top-right{
+.terra-details-top-right {
   display: flex;
   flex-direction: row;
   width: 100%;
 }
 
-.terra-details-top-right-slider-container{
+.terra-details-top-right-slider-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -95,30 +95,30 @@
 }
 
 .terra-details-top-right-bulb-icon,
-.terra-details-top-right-tear-icon{
+.terra-details-top-right-tear-icon {
   height: 2.8vw;
   width: 2.1vw;
 }
 
 .terra-details-top-right-bulb-icon_fill,
-.terra-details-top-right-tear-icon_fill{
+.terra-details-top-right-tear-icon_fill {
   position: absolute;
   height: 2.8vw;
   width: 2.1vw;
 }
 
-.terra-details-top-right-sun-icon{
+.terra-details-top-right-sun-icon {
   height: 2.8vw;
   width: 3vw;
 }
 
-.terra-details-top-right-sun-icon__fill{
+.terra-details-top-right-sun-icon__fill {
   position: absolute;
   height: 2.8vw;
   width: 3vw;
 }
 
-.terra-details-top-right input{
+.terra-details-top-right input {
   width: 2.1vw;
   height: 1.6vw;
   margin-top: 5px;
@@ -129,29 +129,29 @@
   font-size: 0.9vw;
 }
 
-.terra-details-top-right input:focus{
+.terra-details-top-right input:focus {
   outline: none;
   border: 1.2px solid #898888;
 }
 
 /*toggle*/
 ::ng-deep .mat-slide-toggle .mat-slide-toggle-bar,
-::ng-deep .mat-slide-toggle.mat-checked:not(.mat-disabled) .mat-slide-toggle-bar{
+::ng-deep .mat-slide-toggle.mat-checked:not(.mat-disabled) .mat-slide-toggle-bar {
   background-color: #bdbdbd;
 }
 
 ::ng-deep .mat-slide-toggle .mat-slide-toggle-thumb,
-::ng-deep .mat-slide-toggle.mat-checked:not(.mat-disabled) .mat-slide-toggle-thumb{
+::ng-deep .mat-slide-toggle.mat-checked:not(.mat-disabled) .mat-slide-toggle-thumb {
   background-color: #252a37;
 }
 
 /*sliders*/
 ::ng-deep .mat-slider.mat-slider-vertical .mat-slider-thumb-label,
-::ng-deep .mat-slider.mat-slider-vertical .mat-slider-thumb{
+::ng-deep .mat-slider.mat-slider-vertical .mat-slider-thumb {
   background-color: #252a37;
 }
 
-::ng-deep .mat-slider.mat-slider-vertical .mat-slider-thumb{
+::ng-deep .mat-slider.mat-slider-vertical .mat-slider-thumb {
   right: -10.3px;
 }
 
@@ -162,24 +162,24 @@
 }
 
 ::ng-deep .mat-slider.mat-slider-vertical .mat-slider-track-wrapper,
-::ng-deep .mat-slider.mat-slider-vertical .mat-slider-track-fill{
+::ng-deep .mat-slider.mat-slider-vertical .mat-slider-track-fill {
   width: 3px;
 }
 
-::ng-deep .mat-slider-vertical{
+::ng-deep .mat-slider-vertical {
   height: 100%;
   min-height: 11.5vw;
   max-height: 11.5vw;
 }
 
-.terra-details-center{
+.terra-details-center {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   padding: 30px;
 }
 
-.vertical-progressbar-wrapper{
+.vertical-progressbar-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -187,12 +187,12 @@
   width: 70px;
 }
 
-.vertical-progressbar{
+.vertical-progressbar {
   display: flex;
   margin-top: 1vw;
 }
 
-.vertical-progressbar-ticks{
+.vertical-progressbar-ticks {
   margin-top: -1px;
   margin-right: 4px;
   text-align: right;
@@ -201,7 +201,7 @@
   font-family: "Roboto", sans-serif;
 }
 
-.vertical-progressbar-background{
+.vertical-progressbar-background {
   display: flex;
   flex-direction: column-reverse;
   height: 315px;
@@ -211,64 +211,64 @@
   box-shadow: 0 -5px 10px -2px rgba(0, 0, 0, 0.1), 0 4px 10px -2px rgba(0, 0, 0, 0.1);
 }
 
-.vertical-progressbar-fill{
+.vertical-progressbar-fill {
   width: 0.7vw;
   border-radius: 5px;
   background-color: #454c66;
 }
 
-.vertical-progressbar-wrapper .thermometer-icon{
+.vertical-progressbar-wrapper .thermometer-icon {
   height: 5.5vw;
   width: 2.1vw;
   margin-left: 32px;
 }
 
-.vertical-progressbar-wrapper .humidity-icon{
+.vertical-progressbar-wrapper .humidity-icon {
   height: 5.6vw;
   width: 4vw;
   margin-left: 32px;
 }
 
-.vertical-progressbar-wrapper .brightness-icon{
+.vertical-progressbar-wrapper .brightness-icon {
   height: 5.6vw;
   width: 5.6vw;
   margin-left: 32px;
 }
 
 .vertical-progressbar-wrapper .bulb-uva-icon,
-.vertical-progressbar-wrapper .bulb-uvb-icon{
+.vertical-progressbar-wrapper .bulb-uvb-icon {
   height: 5.6vw;
   width: 3.5vw;
   margin-left: 40px;
 }
 
-.vertical-progressbar-wrapper .water-container-icon{
+.vertical-progressbar-wrapper .water-container-icon {
   height: 5.6vw;
   width: 4.6vw;
   margin-left: 35px;
 }
 
-@media only screen and (min-width: 2300px){
+@media only screen and (min-width: 2300px) {
 
-  .terra-details-top-left-container{
+  .terra-details-top-left-container {
     padding-right: 50px;
     padding-top: 50px;
   }
 
-  .terra-details-top-left .robot-img{
+  .terra-details-top-left .robot-img {
     width: 230px;
     height: 230px;
   }
 
-  .terra-details-top-left span{
+  .terra-details-top-left span {
     margin-top: 11px;
   }
 
-  .terra-details-top-middle{
+  .terra-details-top-middle {
     width: 851px;
   }
 
-  .terra-details-top-middle .terra-img{
+  .terra-details-top-middle .terra-img {
     width: 805px;
     height: 391px;
     margin-right: 46px;
@@ -278,7 +278,7 @@
     width: 320px;
   }
 
-  .terra-details-top-right-slider-container{
+  .terra-details-top-right-slider-container {
     width: 92px;
     padding-top: 10px;
   }
@@ -286,63 +286,63 @@
   .terra-details-top-right-bulb-icon,
   .terra-details-top-right-tear-icon,
   .terra-details-top-right-bulb-icon_fill,
-  .terra-details-top-right-tear-icon_fill{
+  .terra-details-top-right-tear-icon_fill {
     height: 64.4px;
     width: 48.3px;
   }
 
-  .terra-details-top-right-sun-icon{
+  .terra-details-top-right-sun-icon {
     height: 64.4px;
     width: 69px;
   }
 
-  .terra-details-top-right-sun-icon__fill{
+  .terra-details-top-right-sun-icon__fill {
     height: 64.4px;
     width: 69px;
   }
 
-  ::ng-deep .mat-slider-vertical{
+  ::ng-deep .mat-slider-vertical {
     height: 100%;
     min-height: 285px;
     max-height: 285px;
   }
 
-  .vertical-progressbar-wrapper{
+  .vertical-progressbar-wrapper {
     margin-right: 120px;
   }
 
-  .vertical-progressbar-background{
+  .vertical-progressbar-background {
     height: 400px;
     width: 17px;
   }
 
-  .vertical-progressbar-ticks{
+  .vertical-progressbar-ticks {
     line-height: 19.5px;
     font-size: 13px;
   }
 
-  .vertical-progressbar-wrapper .thermometer-icon{
+  .vertical-progressbar-wrapper .thermometer-icon {
     height: 127px;
     width: 48.5px;
   }
 
-  .vertical-progressbar-wrapper .humidity-icon{
+  .vertical-progressbar-wrapper .humidity-icon {
     height: 129.5px;
     width: 92.5px;
   }
 
-  .vertical-progressbar-wrapper .brightness-icon{
+  .vertical-progressbar-wrapper .brightness-icon {
     height: 129.5px;
     width: 129.5px;
   }
 
   .vertical-progressbar-wrapper .bulb-uva-icon,
-  .vertical-progressbar-wrapper .bulb-uvb-icon{
+  .vertical-progressbar-wrapper .bulb-uvb-icon {
     height: 129.5px;
     width: 81px;
   }
 
-  .vertical-progressbar-wrapper .water-container-icon{
+  .vertical-progressbar-wrapper .water-container-icon {
     height: 129.5px;
     width: 106.5px;
   }
@@ -351,11 +351,11 @@
 
 @media only screen and (max-width: 1300px) {
 
-  .terra-details-top-right-slider-container{
+  .terra-details-top-right-slider-container {
     width: 3.8vw;
   }
 
-  .vertical-progressbar-wrapper{
+  .vertical-progressbar-wrapper {
     margin-right: 3vw;
   }
 
@@ -363,32 +363,32 @@
     height: 250px;
   }
 
-  .vertical-progressbar-ticks{
+  .vertical-progressbar-ticks {
     line-height: 12px;
   }
 }
 
-@media only screen and (max-width: 960px){
+@media only screen and (max-width: 960px) {
 
-  .terra-details-top-left-container{
+  .terra-details-top-left-container {
     padding-right: 30px;
   }
 
-  .terra-details-top-left .robot-img{
+  .terra-details-top-left .robot-img {
     width: 90px;
     height: 90px;
     margin-bottom: 4px;
   }
 
-  .terra-details-top-left span{
+  .terra-details-top-left span {
     margin-top: 5px;
   }
 
-  .terra-details-top-middle{
+  .terra-details-top-middle {
     width: 333px;
   }
 
-  .terra-details-top-middle .terra-img{
+  .terra-details-top-middle .terra-img {
     width: 315px;
     height: 153px;
     margin-right: 18px;
@@ -399,7 +399,7 @@
     width: 142px;
   }
 
-  .terra-details-top-right-slider-container{
+  .terra-details-top-right-slider-container {
     width: 40px;
     padding-top: 10px;
   }
@@ -407,99 +407,99 @@
   .terra-details-top-right-bulb-icon,
   .terra-details-top-right-tear-icon,
   .terra-details-top-right-bulb-icon_fill,
-  .terra-details-top-right-tear-icon_fill{
+  .terra-details-top-right-tear-icon_fill {
     width: 18.9px;
     height: 25.2px;
   }
 
-  .terra-details-top-right-sun-icon{
+  .terra-details-top-right-sun-icon {
     width: 27px;
     height: 25.2px;
   }
 
-  .terra-details-top-right-sun-icon__fill{
+  .terra-details-top-right-sun-icon__fill {
     width: 27px;
     height: 25.2px;
   }
 
-  .terra-details-top-right input{
+  .terra-details-top-right input {
     width: 20px;
     height: 14px;
     margin-top: 2px;
   }
 
-  .terra-details-center{
+  .terra-details-center {
     padding-top: 25px;
   }
 
-  .vertical-progressbar-wrapper{
+  .vertical-progressbar-wrapper {
     margin-right: 30px;
   }
 
-  .vertical-progressbar-background{
+  .vertical-progressbar-background {
     width: 6.7px;
   }
 
-  .vertical-progressbar-fill{
+  .vertical-progressbar-fill {
     width: 6.7px;
   }
 
-  .vertical-progressbar-wrapper .thermometer-icon{
+  .vertical-progressbar-wrapper .thermometer-icon {
     height: 52.5px;
     width: 20px;
   }
 
-  .vertical-progressbar-wrapper .humidity-icon{
+  .vertical-progressbar-wrapper .humidity-icon {
     height: 53.5px;
     width: 38.2px;
   }
 
-  .vertical-progressbar-wrapper .brightness-icon{
+  .vertical-progressbar-wrapper .brightness-icon {
     height: 53.5px;
     width: 53.5px;
   }
 
   .vertical-progressbar-wrapper .bulb-uva-icon,
-  .vertical-progressbar-wrapper .bulb-uvb-icon{
+  .vertical-progressbar-wrapper .bulb-uvb-icon {
     height: 53.5px;
     width: 33.4px;
   }
 
-  .vertical-progressbar-wrapper .water-container-icon{
+  .vertical-progressbar-wrapper .water-container-icon {
     height: 53.5px;
     width: 44px;
   }
 }
 
-@media only screen and (max-width: 768px){
-  .terra-details-top{
+@media only screen and (max-width: 768px) {
+  .terra-details-top {
     justify-content: flex-start;
     flex-wrap: wrap;
     margin-top: 15px;
   }
 
-  .terra-details-top-left{
-    order:1;
+  .terra-details-top-left {
+    order: 1;
     justify-content: center;
     width: 100%;
     margin-bottom: 2vw;
   }
 
-  .terra-details-top-left-container{
+  .terra-details-top-left-container {
     padding: 10px 0 0 0;
   }
 
-  .terra-details-top-left-container .robot-img{
+  .terra-details-top-left-container .robot-img {
     width: 35vw;
     height: 34vw;
   }
 
-  .terra-details-top-middle{
+  .terra-details-top-middle {
     order: 0;
     width: 100%;
   }
 
-  .terra-details-top-middle .terra-img{
+  .terra-details-top-middle .terra-img {
     height: 38vw;
     width: 77vw;
     margin-right: 0;
@@ -510,28 +510,28 @@
     width: 40vw;
   }
 
-  .terra-details-top-right{
+  .terra-details-top-right {
     order: 2;
     flex-wrap: wrap;
     justify-content: space-evenly;
   }
 
-  .terra-details-top-right-slider-container{
+  .terra-details-top-right-slider-container {
     width: 8vw;
   }
 
-  ::ng-deep .mat-slider-vertical{
+  ::ng-deep .mat-slider-vertical {
     min-height: 250px;
     max-height: 250px;
     height: 250px;
   }
 
   ::ng-deep .mat-slider.mat-slider-vertical .mat-slider-track-wrapper,
-  ::ng-deep .mat-slider.mat-slider-vertical .mat-slider-track-fill{
+  ::ng-deep .mat-slider.mat-slider-vertical .mat-slider-track-fill {
     width: 4px;
   }
 
-  ::ng-deep .mat-slider.mat-slider-vertical .mat-slider-thumb{
+  ::ng-deep .mat-slider.mat-slider-vertical .mat-slider-thumb {
     right: -11.3px;
   }
 
@@ -542,32 +542,32 @@
   }
 
   .terra-details-top-right-tear-icon,
-  .terra-details-top-right-tear-icon_fill{
+  .terra-details-top-right-tear-icon_fill {
     height: 53.5px;
     width: 38.2px;
   }
 
-  .terra-details-top-right-sun-icon{
+  .terra-details-top-right-sun-icon {
     width: 56px;
     height: 53.5px;
   }
 
-  .terra-details-top-right-sun-icon__fill{
+  .terra-details-top-right-sun-icon__fill {
     width: 56px;
     height: 53.5px;
   }
 
-  .terra-details-top-right input{
+  .terra-details-top-right input {
     width: 35px;
     height: 22px;
     font-size: 12px;
   }
 
-  .terra-details-center{
+  .terra-details-center {
     padding-top: 0;
   }
 
-  .vertical-progressbar-wrapper{
+  .vertical-progressbar-wrapper {
     margin-top: 50px;
   }
 }

@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {News, NewsResponse} from '../../models/NewsModel';
+import {HomeService} from '../../services/HomeService';
 
 @Component({
   selector: 'app-home',
@@ -8,10 +10,15 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
 
   panelOpenState = false;
+  newsList: NewsResponse;
+  lastNews: News;
 
-  constructor() { }
+  constructor(private homeService: HomeService) {}
 
   ngOnInit(): void {
+    this.homeService.getAllNews().subscribe(news => {
+      this.newsList = news;
+      this.lastNews = this.newsList._embedded.newsList.pop();
+    });
   }
-
 }

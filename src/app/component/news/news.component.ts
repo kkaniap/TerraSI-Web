@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {NewsService} from '../../services/NewsService';
+import { Router } from '@angular/router';
+import {News} from '../../models/NewsModel';
 
 @Component({
   selector: 'app-news',
@@ -7,9 +10,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewsComponent implements OnInit {
 
-  constructor() { }
+  news: News;
+  newsId: number;
 
-  ngOnInit(): void {
+  constructor(private newsService: NewsService, private router: Router) {
   }
 
+  ngOnInit(): void {
+    this.newsId = Number(this.router.url.replace('/news/', ''));
+    this.newsService.getNewsById(this.newsId).subscribe(news => {
+      this.news = news;
+    })
+  }
 }

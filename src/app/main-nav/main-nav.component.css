@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
-.sidenav-container{
+.sidenav-container {
   height: 100%;
 }
 
 .sidenav-menu {
   width: 310px;
-  background:#252a37;
+  background: #252a37;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.25), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
   border: none;
 }
@@ -24,7 +24,7 @@
   justify-content: center;
 }
 
-.sidenav-menu .mat-list-item{
+.sidenav-menu .mat-list-item {
   height: 70px;
   font-family: 'Open Sans', sans-serif;
   color: #e3e3e3;
@@ -33,39 +33,39 @@
   border-top-style: solid;
 }
 
-.sidenav-menu .mat-list-item:hover{
+.sidenav-menu .mat-list-item:hover {
   background: #797979;
 }
 
-.sidenav-menu .mat-list-item:focus{
-  background:#252a37;
+.sidenav-menu .mat-list-item:focus {
+  background: #252a37;
 }
 
-.sidenav-menu .mat-list-item:focus:hover{
-  background:#797979;
+.sidenav-menu .mat-list-item:focus:hover {
+  background: #797979;
 }
 
-.sidenav-menu .mat-list-item:last-child{
+.sidenav-menu .mat-list-item:last-child {
   border-bottom-style: solid;
   border-top-style: solid;
 }
 
-.sidenav-content{
+.sidenav-content {
   background: #e3e3e3;
 }
 
-.sidenav-content .mat-toolbar{
+.sidenav-content .mat-toolbar {
   display: none;
 }
 
-.sidenav-content .mat-toolbar .wide-src-menu{
+.sidenav-content .mat-toolbar .wide-src-menu {
   display: none;
 }
 
-@media only screen and (min-width: 2300px){
-  .sidenav-content .mat-toolbar{
+@media only screen and (min-width: 2300px) {
+  .sidenav-content .mat-toolbar {
     display: flex;
-    background:#252a37;
+    background: #252a37;
     font-family: 'East Sea Dokdo', cursive;
     font-size: 65px;
   }
@@ -74,18 +74,18 @@
     display: none;
   }
 
-  .sidenav-content .mat-toolbar .wide-src-menu{
+  .sidenav-content .mat-toolbar .wide-src-menu {
     display: flex;
     justify-content: center;
     margin-left: 25%;
     width: 50%;
   }
 
-  .sidenav-content .mat-toolbar .wide-src-menu .logo{
+  .sidenav-content .mat-toolbar .wide-src-menu .logo {
     display: inherit;
   }
 
-  .sidenav-content .mat-toolbar .wide-src-menu a{
+  .sidenav-content .mat-toolbar .wide-src-menu a {
     display: inherit;
     margin-left: 50px;
     font-family: 'Open Sans', sans-serif;
@@ -94,34 +94,34 @@
     text-decoration-line: none;
   }
 
-  .sidenav-menu{
+  .sidenav-menu {
     display: none;
   }
 
 }
 
-@media only screen and (max-width: 1130px){
+@media only screen and (max-width: 1130px) {
   .sidenav-menu {
     width: 26vw;
   }
 
-  .sidenav-menu .logo{
+  .sidenav-menu .logo {
     font-size: 90px;
   }
 }
 
-@media only screen and (max-width: 960px){
+@media only screen and (max-width: 960px) {
 
   .sidenav-menu {
     width: 250px;
   }
 
-  .sidenav-content .mat-toolbar{
+  .sidenav-content .mat-toolbar {
     display: flex;
-    background:#252a37;
+    background: #252a37;
   }
 
-  .sidenav-content .mat-toolbar .logo{
+  .sidenav-content .mat-toolbar .logo {
     font-family: 'East Sea Dokdo', cursive;
     color: white;
     font-size: 65px;
