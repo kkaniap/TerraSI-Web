@@ -19,6 +19,7 @@ export class HomeComponent implements OnInit {
     this.homeService.getAllNews().subscribe(news => {
       this.newsList = news;
       this.lastNews = this.newsList._embedded.newsList.pop();
+      this.newsList._embedded.newsList = this.newsList._embedded.newsList.reverse();
     });
   }
 }

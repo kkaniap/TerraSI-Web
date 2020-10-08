@@ -65,7 +65,7 @@
 
   <div class="news-bottom-container">
     <ng-container *ngIf="newsList != null">
-      <ng-container *ngFor="let news of newsList._embedded.newsList.reverse()">
+      <ng-container *ngFor="let news of newsList._embedded.newsList">
         <a [routerLink]="'news/' + news.id">
           <div class="news-bottom-item">
             <picture>
