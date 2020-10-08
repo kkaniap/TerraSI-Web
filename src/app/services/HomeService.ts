@@ -9,7 +9,7 @@ export class HomeService {
   constructor(private http: HttpClient) {}
 
   getAllNews(): Observable<NewsResponse> {
-    return this.http.get<NewsResponse>('http://localhost:8080/news');
+    return this.http.get<NewsResponse>('https://terrasi-api.herokuapp.com/news');
   }
 }
 
