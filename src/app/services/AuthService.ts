@@ -6,7 +6,7 @@ import { JwtHelperService } from '@auth0/angular-jwt';
 
 @Injectable()
 export class AuthService{
-  private refreshApi = 'http://localhost:8080/refreshToken';
+  private refreshApi = 'http://terrasi-api.herokuapp.com/refreshToken';
   private jwtHelper = new JwtHelperService();
 
   constructor(private http: HttpClient) {
