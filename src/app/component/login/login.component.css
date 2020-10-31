@@ -20,6 +20,13 @@
   background: #e3e3e3;
 }
 
+.login-panel .login-error{
+  font-size: 1vw;
+  color: red;
+  font-weight: bold;
+  margin-bottom: 1vw;
+}
+
 /*input styles*/
 ::ng-deep .mat-form-field {
   font-size: 1vw;
@@ -68,6 +75,11 @@
     height: 575px;
   }
 
+  .login-panel .login-error{
+    margin-bottom: 30px;
+    font-size: 14.5px;
+  }
+
   ::ng-deep .mat-form-field {
     font-size: 25px;
   }
@@ -100,6 +112,10 @@
     padding-top: 3vw;
   }
 
+  .login-panel .login-error{
+    font-size: 1.5vw;
+  }
+
   ::ng-deep .mat-form-field {
     font-size: 1.5vw;
   }
@@ -130,6 +146,11 @@
     width: 70vw;
     height: 80vw;
     padding-top: 10vw;
+  }
+
+  .login-panel .login-error{
+    font-size: 3vw;
+    margin-bottom: 2vw;
   }
 
   ::ng-deep .mat-form-field {

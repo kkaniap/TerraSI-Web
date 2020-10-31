@@ -12,6 +12,7 @@ export class HomeComponent implements OnInit {
   panelOpenState = false;
   newsList: NewsResponse;
   lastNews: News;
+  test: string;
 
   constructor(private homeService: HomeService) {}
 

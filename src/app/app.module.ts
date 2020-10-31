@@ -16,15 +16,19 @@ import {MatListModule} from '@angular/material/list';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import {TerraDetailsComponent} from './component/terra-details/terra-details.component';
 import {MatSliderModule} from '@angular/material/slider';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatInputModule} from '@angular/material/input';
 import {NewsComponent} from './component/news/news.component';
 import {LoginComponent} from './component/login/login.component';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatExpansionModule} from '@angular/material/expansion';
-import {HttpClientModule} from '@angular/common/http';
+import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import {HomeService} from './services/HomeService';
 import {NewsService} from './services/NewsService';
+import {AuthInterceptor} from './interceptors/AuthInterceptor';
+import {AuthService} from './services/AuthService';
+import {UserGuardService} from './services/UserGuardService';
+
 
 @NgModule({
   declarations: [
@@ -36,25 +40,32 @@ import {NewsService} from './services/NewsService';
     NewsComponent,
     LoginComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    LayoutModule,
-    MatToolbarModule,
-    MatButtonModule,
-    MatSidenavModule,
-    MatIconModule,
-    MatListModule,
-    MatSlideToggleModule,
-    MatSliderModule,
-    FormsModule,
-    MatInputModule,
-    MatFormFieldModule,
-    MatExpansionModule,
-    HttpClientModule
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        LayoutModule,
+        MatToolbarModule,
+        MatButtonModule,
+        MatSidenavModule,
+        MatIconModule,
+        MatListModule,
+        MatSlideToggleModule,
+        MatSliderModule,
+        FormsModule,
+        MatInputModule,
+        MatFormFieldModule,
+        MatExpansionModule,
+        HttpClientModule,
+        ReactiveFormsModule,
+    ],
+  providers: [
+    HomeService,
+    NewsService,
+    {provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true},
+    AuthService,
+    UserGuardService
   ],
-  providers: [HomeService, NewsService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

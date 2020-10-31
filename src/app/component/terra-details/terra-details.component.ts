@@ -1,5 +1,4 @@
-import {Component, OnInit} from '@angular/core';
-import {HostListener} from '@angular/core';
+import {Component, HostListener, OnInit} from '@angular/core';
 
 
 @Component({

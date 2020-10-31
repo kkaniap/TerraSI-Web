@@ -3,21 +3,23 @@
     TerraSI
   </div>
   <div class="login-panel">
+      <div class="login-error">
+        {{errorMsg}}
+      </div>
+      <mat-form-field appearance="fill">
+        <mat-label>{{usernameLabel}}</mat-label>
+        <input matInput [(ngModel)]="username" (keydown.enter)="submitForm()">
+      </mat-form-field>
 
-    <mat-form-field appearance="fill">
-      <mat-label>Enter your login</mat-label>
-      <input matInput>
-    </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>{{passwordLabel}}</mat-label>
+        <input matInput [type]="hide ? 'password' : 'text'" [(ngModel)]="password" (keydown.enter)="submitForm()">
+        <button mat-icon-button matSuffix (click)="hide = !hide">
+          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+      </mat-form-field>
 
-    <mat-form-field appearance="fill">
-      <mat-label>Enter your password</mat-label>
-      <input matInput [type]="hide ? 'password' : 'text'">
-      <button mat-icon-button matSuffix (click)="hide = !hide">
-        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-      </button>
-    </mat-form-field>
-
-    <button mat-raised-button class="submit-button">Login</button>
+      <button mat-raised-button class="submit-button" (click)="submitForm()">Login</button>
 
   </div>
 </div>
