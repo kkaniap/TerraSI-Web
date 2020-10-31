@@ -16,7 +16,7 @@ export class LoginComponent implements OnInit {
   password: string = '';
   usernameLabel: string = 'Enter your login';
   passwordLabel: string = 'Enter your password';
-  api: string = 'http://localhost:8080/login';
+  api: string = 'https://terrasi-api.herokuapp.com/login';
 
   constructor(private http: HttpClient, private router: Router, private authService: AuthService) {
   }

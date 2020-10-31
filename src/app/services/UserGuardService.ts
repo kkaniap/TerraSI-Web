@@ -20,7 +20,7 @@ export class UserGuardService implements CanActivate{
     if(this.authService.isAuthenticated() && tokenPayload.roles.includes('ROLE_USER')){
       return true;
     }
-    this.router.navigate(['']);
+    this.router.navigate(['login']);
     return false;
   }
 }
