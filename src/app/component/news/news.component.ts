@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {NewsService} from '../../services/NewsService';
 import {Router} from '@angular/router';
-import {News} from '../../models/NewsModel';
+import {News} from '../../models/News';
 
 @Component({
   selector: 'app-news',

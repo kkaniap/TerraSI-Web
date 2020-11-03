@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
-import {NewsResponse} from '../models/NewsModel';
+import {NewsResponse} from '../models/News';
 
 @Injectable()
 export class HomeService {
