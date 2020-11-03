@@ -11,6 +11,6 @@ export class NewsService {
   constructor(private http: HttpClient) {}
 
   getNewsById(id: number): Observable<News> {
-    return this.http.get<News>('https://terrasi-api.herokuapp.com/news/' + id);
+    return this.http.get<News>('http://localhost:8080/news/' + id);
   }
 }

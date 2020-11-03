@@ -13,13 +13,13 @@ export class UserGuardService implements CanActivate{
   }
 
   canActivate(route: ActivatedRouteSnapshot): boolean{
-    const expectedRole = route.data.expectedRole;
     const token = localStorage.getItem('accessToken');
     const tokenPayload = this.jwtHelper.decodeToken(token);
 
     if(this.authService.isAuthenticated() && tokenPayload.roles.includes('ROLE_USER')){
       return true;
     }
+    this.authService.removeLocalStorageTokens();
     this.router.navigate(['login']);
     return false;
   }

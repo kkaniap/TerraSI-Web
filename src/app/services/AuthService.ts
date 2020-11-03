@@ -6,7 +6,8 @@ import { JwtHelperService } from '@auth0/angular-jwt';
 
 @Injectable()
 export class AuthService{
-  private refreshApi = 'http://terrasi-api.herokuapp.com/refreshToken';
+  private refreshApi = 'http://localhost:8080/refreshToken';
+  private api = 'http://localhost:8080/login';
   private jwtHelper = new JwtHelperService();
 
   constructor(private http: HttpClient) {
@@ -33,6 +34,10 @@ export class AuthService{
   isAuthenticated(): boolean {
     const token = localStorage.getItem('refreshToken');
     return !this.jwtHelper.isTokenExpired(token);
+  }
+
+  login(username: string, password: string){
+    return this.http.post<any>(this.api, {username:username, password:password})
   }
 
 }

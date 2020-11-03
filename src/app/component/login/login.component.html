@@ -19,7 +19,8 @@
         </button>
       </mat-form-field>
 
-      <button mat-raised-button class="submit-button" (click)="submitForm()">Login</button>
+      <button mat-raised-button class="submit-button" (click)="submitForm()" *ngIf="visible">Login</button>
+      <button mat-raised-button class="submit-button" (click)="submitForm()" *ngIf="!visible" [class.spinner]="!visible" [disabled]="!visible"></button>
 
   </div>
 </div>

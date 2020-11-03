@@ -16,7 +16,7 @@ export class LoginComponent implements OnInit {
   password: string = '';
   usernameLabel: string = 'Enter your login';
   passwordLabel: string = 'Enter your password';
-  api: string = 'https://terrasi-api.herokuapp.com/login';
+  visible: boolean = true;
 
   constructor(private http: HttpClient, private router: Router, private authService: AuthService) {
   }
@@ -47,15 +47,16 @@ export class LoginComponent implements OnInit {
     return flag;
   }
 
-  login(){
+  login(){this.visible = false;
     this.authService.removeLocalStorageTokens();
-    this.http.post<any>(this.api, {username:this.username, password:this.password}).subscribe({
+    this.authService.login(this.username, this.password).subscribe({
       next: data => {
           this.authService.addLocalStorageTokens(data.accessToken, data.refreshToken);
           this.router.navigate(['']);
         },
       error: error => {
         this.errorMsg = 'Bad username or password';
+        this.visible = true;
       }
       });
   }

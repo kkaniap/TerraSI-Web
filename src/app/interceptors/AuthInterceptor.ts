@@ -14,7 +14,6 @@ export class AuthInterceptor implements HttpInterceptor{
   }
 
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-    console.log('test');
     if(localStorage.getItem('accessToken')){
       req = this.addToken(req, localStorage.getItem('accessToken'));
     }

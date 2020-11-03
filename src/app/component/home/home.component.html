@@ -1,6 +1,5 @@
 <app-main-nav>
-
-
+  <app-spinner-overlay *ngIf="isLoading"></app-spinner-overlay>
   <div class="alerts">
     <mat-expansion-panel (opened)="panelOpenState = true"
                          (closed)="panelOpenState = false">
@@ -9,7 +8,7 @@
           Alerts
         </mat-panel-title>
         <mat-panel-description>
-          You have 3 messages {{test}}
+          You have 3 messages
         </mat-panel-description>
       </mat-expansion-panel-header>
       <div class="mat-expansion-panel-item">

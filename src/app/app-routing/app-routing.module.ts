@@ -12,7 +12,7 @@ const routes: Routes = [
   {path: 'terrariums', component: TerrariumsComponent, canActivate: [UserGuardService]},
   {path: 'terrariums/1', component: TerraDetailsComponent},
   {path: 'news/:id', component: NewsComponent},
-  {path: 'login', component: LoginComponent}
+  {path: 'login', component: LoginComponent},
 ];
 
 @NgModule({

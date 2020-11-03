@@ -13,7 +13,6 @@ export class AdminGuardService implements CanActivate{
   }
 
   canActivate(route: ActivatedRouteSnapshot): boolean{
-    const expectedRole = route.data.expectedRole;
     const token = localStorage.getItem('accessToken');
     const tokenPayload = this.jwtHelper.decodeToken(token);
 

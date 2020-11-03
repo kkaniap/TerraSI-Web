@@ -28,6 +28,8 @@ import {NewsService} from './services/NewsService';
 import {AuthInterceptor} from './interceptors/AuthInterceptor';
 import {AuthService} from './services/AuthService';
 import {UserGuardService} from './services/UserGuardService';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import {SpinnerOverlayComponent} from './component/spinner-overlay/spinner-overlay.component';
 
 
 @NgModule({
@@ -38,7 +40,8 @@ import {UserGuardService} from './services/UserGuardService';
     MainNavComponent,
     TerraDetailsComponent,
     NewsComponent,
-    LoginComponent
+    LoginComponent,
+    SpinnerOverlayComponent
   ],
     imports: [
         BrowserModule,
@@ -58,6 +61,7 @@ import {UserGuardService} from './services/UserGuardService';
         MatExpansionModule,
         HttpClientModule,
         ReactiveFormsModule,
+        MatProgressSpinnerModule,
     ],
   providers: [
     HomeService,
