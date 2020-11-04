@@ -1,49 +1,17 @@
 <app-main-nav>
+  <app-spinner-overlay *ngIf="isLoading"></app-spinner-overlay>
   <div class="terra-container">
-
-    <a [routerLink]="'1'">
-      <div class="terra-item">
-        <img src="assets/terrariumsAssets/terrarium.png" alt="terrarium_img">
-        <div class="terra-item-content">
-          Terrarium nr 1
-        </div>
-      </div>
-    </a>
-
-    <div class="terra-item">
-      <img src="assets/terrariumsAssets/terrarium.png" alt="terrarium_img">
-      <div class="terra-item-content">
-        Terrarium nr 2
-      </div>
-    </div>
-
-    <div class="terra-item">
-      <img src="assets/terrariumsAssets/terrarium.png" alt="terrarium_img">
-      <div class="terra-item-content">
-        Terrarium nr 3
-      </div>
-    </div>
-
-    <div class="terra-item">
-      <img src="assets/terrariumsAssets/terrarium.png" alt="terrarium_img">
-      <div class="terra-item-content">
-        Terrarium nr 4
-      </div>
-    </div>
-
-    <div class="terra-item">
-      <img src="assets/terrariumsAssets/terrarium.png" alt="terrarium_img">
-      <div class="terra-item-content">
-        Terrarium nr 5
-      </div>
-    </div>
-
-    <div class="terra-item">
-      <img src="assets/terrariumsAssets/terrarium.png" alt="terrarium_img">
-      <div class="terra-item-content">
-        Terrarium nr 6
-      </div>
-    </div>
-
+    <ng-container *ngIf="terrariums != null">
+      <ng-container *ngFor="let terrarium of terrariums._embedded.terrariumList">
+        <a [routerLink]="'/terrariums/' + terrarium.id">
+          <div class="terra-item">
+            <img src="assets/terrariumsAssets/terrarium.png" alt="terrarium_img">
+            <div class="terra-item-content">
+              {{terrarium.name}}
+            </div>
+          </div>
+        </a>
+      </ng-container>
+    </ng-container>
   </div>
 </app-main-nav>

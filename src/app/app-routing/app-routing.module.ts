@@ -10,7 +10,7 @@ import {UserGuardService} from '../services/UserGuardService';
 const routes: Routes = [
   {path: '', component: HomeComponent, canActivate: [UserGuardService]},
   {path: 'terrariums', component: TerrariumsComponent, canActivate: [UserGuardService]},
-  {path: 'terrariums/1', component: TerraDetailsComponent},
+  {path: 'terrariums/:id', component: TerraDetailsComponent},
   {path: 'news/:id', component: NewsComponent},
   {path: 'login', component: LoginComponent},
 ];

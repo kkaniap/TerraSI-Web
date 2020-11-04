@@ -18,7 +18,8 @@ export class AuthInterceptor implements HttpInterceptor{
       req = this.addToken(req, localStorage.getItem('accessToken'));
     }
     return next.handle(req).pipe(catchError(err => {
-      if(err instanceof HttpErrorResponse && err.status === 401){
+      if(err instanceof HttpErrorResponse && err.status === 401
+        && (err.error.message === 'Token expired' || err.error.message === 'Enter valid token')){
         return this.handle401Error(req, next);
       } else {
         return throwError(err);
@@ -47,9 +48,10 @@ export class AuthInterceptor implements HttpInterceptor{
           this.refreshTokenSubject.next(token['accessToken']);
           return next.handle(this.addToken(request, token['accessToken']));
         }), catchError(error => {
-          if(error instanceof HttpErrorResponse && error.status === 401){
+          if(error instanceof HttpErrorResponse && error.status === 401
+            && (error.error.message === 'Token expired' || error.error.message === 'Enter valid token')){
             this.authService.removeLocalStorageTokens();
-            return
+            return;
           } else {
             return throwError(error);
           }

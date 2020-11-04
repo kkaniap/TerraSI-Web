@@ -30,6 +30,7 @@ import {AuthService} from './services/AuthService';
 import {UserGuardService} from './services/UserGuardService';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {SpinnerOverlayComponent} from './component/spinner-overlay/spinner-overlay.component';
+import {TerrariumService} from './services/TerrariumService';
 
 
 @NgModule({
@@ -68,7 +69,8 @@ import {SpinnerOverlayComponent} from './component/spinner-overlay/spinner-overl
     NewsService,
     {provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true},
     AuthService,
-    UserGuardService
+    UserGuardService,
+    TerrariumService
   ],
   bootstrap: [AppComponent]
 })

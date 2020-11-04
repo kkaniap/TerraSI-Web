@@ -1,4 +1,8 @@
 import {Component, HostListener, OnInit} from '@angular/core';
+import {Router} from '@angular/router';
+import {TerrariumService} from '../../services/TerrariumService';
+import {HttpErrorResponse} from '@angular/common/http';
+import {Terrarium} from '../../models/Terrarium';
 
 
 @Component({
@@ -20,11 +24,29 @@ export class TerraDetailsComponent implements OnInit {
   sunset = 0;
   sunSpeed = 0;
 
-  constructor() {
+  terrarium: Terrarium;
+  isLoading: boolean;
+
+  constructor(private router: Router, private terrariumService: TerrariumService) {
     this.setIconSize();
   }
 
   ngOnInit(): void {
+    this.isLoading = true;
+    let terrariumId = Number(this.router.url.replace('/terrariums/',''));
+    this.terrariumService.getTerrariumById(terrariumId).subscribe(
+      result => {
+      this.terrarium = result;
+      this.isLoading = false;
+      console.log(result);
+      return;
+    },
+      error => {
+        if(error instanceof HttpErrorResponse && (error.status === 401 || error.status === 404)){
+          this.router.navigate(['/terrariums']);
+          return;
+        }
+      })
   }
 
   @HostListener('window:resize', ['$event'])

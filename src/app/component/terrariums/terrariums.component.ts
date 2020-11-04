@@ -1,4 +1,6 @@
 import {Component, OnInit} from '@angular/core';
+import {TerrariumService} from '../../services/TerrariumService';
+import {TerrariumResponse} from '../../models/Terrarium';
 
 @Component({
   selector: 'app-terrariums',
@@ -7,10 +9,17 @@ import {Component, OnInit} from '@angular/core';
 })
 export class TerrariumsComponent implements OnInit {
 
-  constructor() {
+  terrariums: TerrariumResponse;
+  isLoading: boolean;
+
+  constructor(private terrariumService: TerrariumService) {
   }
 
   ngOnInit(): void {
+    this.isLoading = true;
+    this.terrariumService.getAllTerrariumsForUser().subscribe( terrariums => {
+        this.terrariums = terrariums;
+        this.isLoading = false;
+      });
   }
-
 }

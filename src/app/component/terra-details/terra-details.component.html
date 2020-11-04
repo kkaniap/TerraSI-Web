@@ -1,12 +1,13 @@
 <app-main-nav>
-  <div class="terra-details-container">
+  <app-spinner-overlay *ngIf="isLoading"></app-spinner-overlay>
+  <div class="terra-details-container" *ngIf="terrarium != null">
     <div class="terra-details-top">
 
       <div class="terra-details-top-left">
         <div class="terra-details-top-left-container">
           <img src="assets/terrariumsAssets/robot.png" class="robot-img" alt="turn_ON_SI">
           <mat-slide-toggle></mat-slide-toggle>
-          <span>OFF / ON</span>
+          <span>OFF / ON{{terrarium.name}}</span>
         </div>
       </div>
 
