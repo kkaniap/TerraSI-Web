@@ -1,4 +1,4 @@
-import {Component, HostListener, OnInit} from '@angular/core';
+import {Component, HostListener, Input, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
 import {TerrariumService} from '../../services/TerrariumService';
 import {HttpErrorResponse} from '@angular/common/http';
@@ -18,10 +18,8 @@ export class TerraDetailsComponent implements OnInit {
   tearWidth: number;
   sunWidth: number;
 
-  targetLightPower = 100;
-  targetHumidity = 80;
-  sunrise = 0;
-  sunset = 0;
+  sunrise: number;
+  sunset: number;
   sunSpeed = 0;
 
   terrarium: Terrarium;
@@ -37,8 +35,9 @@ export class TerraDetailsComponent implements OnInit {
     this.terrariumService.getTerrariumById(terrariumId).subscribe(
       result => {
       this.terrarium = result;
+      this.sunrise = this.terrariumService.convertTimeToNumber(this.terrarium.terrariumSettings.sunriseTime);
+      this.sunset = this.terrariumService.convertTimeToNumber(this.terrarium.terrariumSettings.sunsetTime);
       this.isLoading = false;
-      console.log(result);
       return;
     },
       error => {
@@ -47,6 +46,49 @@ export class TerraDetailsComponent implements OnInit {
           return;
         }
       })
+  }
+
+  timeToDecimal(id: string): void{
+    if(id === 'sunrise-input'){
+      let time = (<HTMLInputElement>document.getElementById(id)).value;
+      this.sunrise = this.terrariumService.convertTimeToNumber(time);
+    }
+    else if(id === 'sunset-input'){
+      let time = (<HTMLInputElement>document.getElementById(id)).value;
+      this.sunset = this.terrariumService.convertTimeToNumber(time);
+    }
+  }
+
+  decimalToTime(id: string): string{
+    if(id === 'sunrise-input'){
+      let hours = Math.floor(this.sunrise);
+      let minutes = Math.floor((this.sunrise - hours) * 60);
+      return hours + ':' + (minutes===0 ? '00' :  minutes);
+    }
+    else if(id === 'sunset-input'){
+      let hours = Math.floor(this.sunset);
+      let minutes = Math.floor((this.sunset - hours) * 60);
+      return hours + ':' + (minutes===0 ? '00' :  minutes);
+    }
+  }
+
+  timeLabel(value: number | null) {
+    if (!value) {
+      return 0;
+    }
+    let hhPart;
+    let decimalPart = +value.toString().replace(/^[^\.]+/,'0');
+    let mm = decimalPart * 60;
+    let mmPart = mm.toString().length == 1 ? mm.toString() + "0" : mm.toString();
+    if (value >= 0) {
+      let valueStr = value.toFixed(2);
+      let strArr = valueStr.split(".");
+      if(strArr[0].length == 1) {
+        strArr[0] = "0" + strArr[0];
+      }
+      hhPart = strArr[0];
+    }
+    return hhPart + ":" + mmPart;
   }
 
   @HostListener('window:resize', ['$event'])
@@ -73,32 +115,35 @@ export class TerraDetailsComponent implements OnInit {
   }
 
   fillTargetLightPower() {
-    return `clip:rect(${(this.iconHeight / 100) * (100 - this.targetLightPower)}${this.iconUnit},
+    return `clip:rect(${(this.iconHeight / 100) * (100 - this.terrarium.terrariumSettings.lightPower)}${this.iconUnit},
     ${this.bulbWidth}${this.iconUnit},
     ${this.iconHeight}${this.iconUnit},0);`;
   }
 
   fillTargetHumidity() {
-    return `clip:rect(${(this.iconHeight / 100) * (100 - this.targetHumidity)}${this.iconUnit},
+    return `clip:rect(${(this.iconHeight / 100) * (100 - this.terrarium.terrariumSettings.humidityLevel)}${this.iconUnit},
     ${this.tearWidth}${this.iconUnit},
     ${this.iconHeight}${this.iconUnit},0);`;
   }
 
   fillSunrise() {
-    return `clip:rect(${(this.iconHeight / 100) * (100 - this.sunrise)}${this.iconUnit},
+    return `clip:rect(${(this.iconHeight / 24) * (24 - this.sunrise)}${this.iconUnit},
     ${this.sunWidth}${this.iconUnit},
     ${this.iconHeight}${this.iconUnit},0);`;
   }
 
   fillSunset() {
-    return `clip:rect(${(this.iconHeight / 100) * (100 - this.sunset)}${this.iconUnit},
+    return `clip:rect(${(this.iconHeight / 24) * (24 - this.sunset)}${this.iconUnit},
     ${this.sunWidth}${this.iconUnit},
     ${this.iconHeight}${this.iconUnit},0);`;
   }
 
   fillSunSpeed() {
-    return `clip:rect(${(this.iconHeight / 100) * (100 - this.sunSpeed)}${this.iconUnit},
+    return `clip:rect(${(this.iconHeight / 100) * (100 - this.terrarium.terrariumSettings.sunSpeed)}${this.iconUnit},
     ${this.sunWidth}${this.iconUnit},
     ${this.iconHeight}${this.iconUnit},0);`;
   }
+
+
+
 }

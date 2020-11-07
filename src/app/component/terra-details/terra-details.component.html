@@ -6,8 +6,8 @@
       <div class="terra-details-top-left">
         <div class="terra-details-top-left-container">
           <img src="assets/terrariumsAssets/robot.png" class="robot-img" alt="turn_ON_SI">
-          <mat-slide-toggle></mat-slide-toggle>
-          <span>OFF / ON{{terrarium.name}}</span>
+          <mat-slide-toggle [checked]="terrarium.autoManagement"></mat-slide-toggle>
+          <span>OFF / ON</span>
         </div>
       </div>
 
@@ -16,7 +16,7 @@
 
         <mat-form-field>
           <mat-label>Name</mat-label>
-          <input matInput>
+          <input matInput [value]="terrarium.name">
         </mat-form-field>
 
       </div>
@@ -26,32 +26,32 @@
           <img src="assets/terrariumsAssets/bulb.png" alt="bulb_icon" class="terra-details-top-right-bulb-icon">
           <img src="assets/terrariumsAssets/bulb-fill.png" alt="bulb_icon"
                class="terra-details-top-right-bulb-icon_fill" style="{{fillTargetLightPower()}}">
-          <mat-slider vertical thumbLabel [(ngModel)]="targetLightPower"></mat-slider>
-          <input [(ngModel)]="targetLightPower">
+          <mat-slider vertical thumbLabel [(ngModel)]="terrarium.terrariumSettings.lightPower"></mat-slider>
+          <input [(ngModel)]="terrarium.terrariumSettings.lightPower">
         </div>
 
         <div class="terra-details-top-right-slider-container">
           <img src="assets/terrariumsAssets/tear.png" alt="tear_icon" class="terra-details-top-right-tear-icon">
           <img src="assets/terrariumsAssets/tear-fill.png" alt="tear_icon"
                class="terra-details-top-right-tear-icon_fill" style="{{fillTargetHumidity()}}">
-          <mat-slider vertical thumbLabel [(ngModel)]="targetHumidity"></mat-slider>
-          <input [(ngModel)]="targetHumidity">
+          <mat-slider vertical thumbLabel [(ngModel)]="terrarium.terrariumSettings.humidityLevel"></mat-slider>
+          <input [(ngModel)]="terrarium.terrariumSettings.humidityLevel">
         </div>
 
         <div class="terra-details-top-right-slider-container">
           <img src="assets/terrariumsAssets/sunrise.png" alt="sunrise_icon" class="terra-details-top-right-sun-icon">
           <img src="assets/terrariumsAssets/sunrise-fill.png" alt="sunrise_icon"
                class="terra-details-top-right-sun-icon__fill" style="{{fillSunrise()}}">
-          <mat-slider vertical thumbLabel [(ngModel)]="sunrise"></mat-slider>
-          <input [(ngModel)]="sunrise">
+          <mat-slider id="sunrise-slider" vertical thumbLabel min="0" max="24" step="0.5" [displayWith]="timeLabel" [(ngModel)]="sunrise"></mat-slider>
+          <input id="sunrise-input" [ngModel]="decimalToTime(sunriseInput.id)" (change)="timeToDecimal(sunriseInput.id)" #sunriseInput>
         </div>
 
         <div class="terra-details-top-right-slider-container">
           <img src="assets/terrariumsAssets/sunset.png" alt="sunset_icon" class="terra-details-top-right-sun-icon">
           <img src="assets/terrariumsAssets/sunset-fill.png" alt="sunset_icon"
                class="terra-details-top-right-sun-icon__fill" style="{{fillSunset()}}">
-          <mat-slider vertical thumbLabel [(ngModel)]="sunset"></mat-slider>
-          <input [(ngModel)]="sunset">
+          <mat-slider vertical thumbLabel min="0" max="24" step="0.5" [displayWith]="timeLabel" [(ngModel)]="sunset"></mat-slider>
+          <input id="sunset-input" [ngModel]="decimalToTime(sunsetInput.id)" (change)="timeToDecimal(sunsetInput.id)" #sunsetInput>
         </div>
 
         <div class="terra-details-top-right-slider-container">
@@ -59,8 +59,8 @@
                class="terra-details-top-right-sun-icon">
           <img src="assets/terrariumsAssets/sun-speed-fill.png" alt="suns_speed_icon"
                class="terra-details-top-right-sun-icon__fill" style="{{fillSunSpeed()}}">
-          <mat-slider vertical thumbLabel [(ngModel)]="sunSpeed"></mat-slider>
-          <input [(ngModel)]="sunSpeed">
+          <mat-slider vertical thumbLabel [(ngModel)]="terrarium.terrariumSettings.sunSpeed"></mat-slider>
+          <input [(ngModel)]="terrarium.terrariumSettings.sunSpeed">
         </div>
       </div>
     </div>

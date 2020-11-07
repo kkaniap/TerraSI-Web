@@ -2,7 +2,7 @@ export interface TerrariumSettings{
   id?: number;
   lightPower?: number;
   humidityLevel?: number;
-  sunriseTime?: Date;
-  sunsetTime?: Date;
+  sunriseTime?: string;
+  sunsetTime?: string;
   sunSpeed?: number;
 }

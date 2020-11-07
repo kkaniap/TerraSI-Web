@@ -17,4 +17,12 @@ export class TerrariumService{
   getTerrariumById(id: number): Observable<Terrarium>{
     return this.http.get<Terrarium>(this.api + '/terrariums/' + id);
   }
+
+  convertTimeToNumber(date: string): number{
+    let hoursMinutes = date.split(':');
+    let hours = Number(hoursMinutes[0]);
+    let minutes = (Number(hoursMinutes[1]) / 60);
+    return hours + minutes;
+  }
+
 }
