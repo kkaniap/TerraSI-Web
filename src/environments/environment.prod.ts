@@ -1,5 +1,5 @@
 export const environment = {
-  production: false,
-  hostURL: 'https://terrasi-api.herokuapp.com',
+  production: true,
+  hostURL: 'https://terrasi-api.herokuapp.comss',
   env: 'prod'
 };
