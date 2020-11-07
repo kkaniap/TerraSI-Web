@@ -1,13 +1,12 @@
 import {HttpClient} from '@angular/common/http';
 import {Injectable} from '@angular/core';
 import { JwtHelperService } from '@auth0/angular-jwt';
-
+import {environment} from '../../environments/environment';
 
 
 @Injectable()
 export class AuthService{
-  private refreshApi = 'http://localhost:8080/refreshToken';
-  private api = 'http://localhost:8080/login';
+
   private jwtHelper = new JwtHelperService();
 
   constructor(private http: HttpClient) {
@@ -24,7 +23,7 @@ export class AuthService{
   }
 
   refreshAccessToken(){
-    return this.http.post(this.refreshApi, {refreshToken: localStorage.getItem('refreshToken')})
+    return this.http.post(environment.hostURL + '/refreshToken', {refreshToken: localStorage.getItem('refreshToken')})
   }
 
   saveAccessToken(accessToken: string){
@@ -37,7 +36,7 @@ export class AuthService{
   }
 
   login(username: string, password: string){
-    return this.http.post<any>(this.api, {username:username, password:password})
+    return this.http.post<any>(environment.hostURL + '/login', {username:username, password:password})
   }
 
 }

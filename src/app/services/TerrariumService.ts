@@ -2,20 +2,19 @@ import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {Terrarium, TerrariumResponse} from '../models/Terrarium';
+import {environment} from '../../environments/environment';
 
 @Injectable()
 export class TerrariumService{
 
-  private api = 'http://localhost:8080';
-
   constructor(private http: HttpClient) {}
 
   getAllTerrariumsForUser(): Observable<TerrariumResponse>{
-    return this.http.get<TerrariumResponse>(this.api + '/terrariums');
+    return this.http.get<TerrariumResponse>(environment.hostURL + '/terrariums');
   }
 
   getTerrariumById(id: number): Observable<Terrarium>{
-    return this.http.get<Terrarium>(this.api + '/terrariums/' + id);
+    return this.http.get<Terrarium>(environment.hostURL + '/terrariums/' + id);
   }
 
   convertTimeToNumber(date: string): number{
