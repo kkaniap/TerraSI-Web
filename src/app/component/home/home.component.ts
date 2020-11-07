@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {News, NewsResponse} from '../../models/News';
 import {HomeService} from '../../services/HomeService';
+import {environment} from '../../../environments/environment';
 
 @Component({
   selector: 'app-home',
@@ -17,6 +18,7 @@ export class HomeComponent implements OnInit {
   constructor(private homeService: HomeService) {}
 
   ngOnInit(): void {
+    console.log(environment.hostURL);
     this.isLoading = true;
     this.homeService.getAllNews().subscribe(news => {
       this.newsList = news;
