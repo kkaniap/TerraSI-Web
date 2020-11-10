@@ -1,6 +1,11 @@
 <app-main-nav>
   <app-spinner-overlay *ngIf="isLoading"></app-spinner-overlay>
   <div class="terra-container">
+    <ng-container *ngIf="message != null">
+      <div class="terra-container__msg">
+        {{message}}
+      </div>
+    </ng-container>
     <ng-container *ngIf="terrariums != null">
       <ng-container *ngFor="let terrarium of terrariums._embedded.terrariumList">
         <a [routerLink]="'/terrariums/' + terrarium.id">

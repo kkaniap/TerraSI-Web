@@ -68,7 +68,6 @@
     <hr>
 
     <div class="terra-details-center">
-
       <div class="vertical-progressbar-wrapper">
         <img src="assets/terrariumsAssets/thermometer.png" alt="thermometer_icon" class="thermometer-icon">
         <div class="vertical-progressbar">
@@ -76,7 +75,7 @@
             -<br>-<br>-<br>-<br>20°C -<br>-<br>-<br>-<br>10°C -
           </div>
           <div class="vertical-progressbar-background">
-            <div class="vertical-progressbar-fill" style="height: 65%"></div>
+            <div class="vertical-progressbar-fill" [style]="convertTemperature()"></div>
           </div>
         </div>
       </div>
@@ -88,7 +87,7 @@
             -<br>-<br>-<br>-<br>-<br>25% -<br>-<br>-<br>-<br>-<br>0% -
           </div>
           <div class="vertical-progressbar-background">
-            <div class="vertical-progressbar-fill" style="height: 80%"></div>
+            <div class="vertical-progressbar-fill" [style]="convertHumidity()"></div>
           </div>
         </div>
       </div>
@@ -100,7 +99,7 @@
             -<br>-<br>-<br>-<br>-<br>25% -<br>-<br>-<br>-<br>-<br>0% -
           </div>
           <div class="vertical-progressbar-background">
-            <div class="vertical-progressbar-fill" style="height: 100%"></div>
+            <div class="vertical-progressbar-fill" [style]="convertBrightness()"></div>
           </div>
         </div>
       </div>
@@ -112,7 +111,7 @@
             -<br>-<br>-<br>-<br>-<br>100nm -<br>-<br>-<br>-<br>-<br>0nm -
           </div>
           <div class="vertical-progressbar-background">
-            <div class="vertical-progressbar-fill" style="height: 90%"></div>
+            <div class="vertical-progressbar-fill" [style]="convertUVA()"></div>
           </div>
         </div>
       </div>
@@ -124,7 +123,7 @@
             -<br>-<br>-<br>-<br>-<br>100nm -<br>-<br>-<br>-<br>-<br>0nm -
           </div>
           <div class="vertical-progressbar-background">
-            <div class="vertical-progressbar-fill" style="height: 70%"></div>
+            <div class="vertical-progressbar-fill" [style]="convertUVB()"></div>
           </div>
         </div>
       </div>
@@ -136,7 +135,7 @@
             -<br>-<br>-<br>-<br>-<br>25% -<br>-<br>-<br>-<br>-<br>0% -
           </div>
           <div class="vertical-progressbar-background">
-            <div class="vertical-progressbar-fill" style="height: 75%"></div>
+            <div class="vertical-progressbar-fill" [style]="convertWaterLevel()"></div>
           </div>
         </div>
       </div>

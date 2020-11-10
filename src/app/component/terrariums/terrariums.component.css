@@ -23,6 +23,14 @@
   text-decoration: none;
 }
 
+.terra-container__msg{
+  width: 100%;
+  text-align: center;
+  margin-top: 5vw;
+  font-size: 3vw;
+  color: #898888;
+}
+
 .terra-item {
   display: flex;
   flex-direction: column;
@@ -59,12 +67,25 @@
     justify-content: center;
     margin: 0 5%;
   }
+
+  .terra-container__msg{
+    margin-top: 125px;
+    font-size: 77px;
+
+  }
 }
 
 @media only screen and (max-width: 1081px) {
   .terra-container {
     justify-content: center;
     padding: 0;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .terra-container__msg{
+    margin-top: 6vw;
+    font-size: 5vw;
   }
 }
 

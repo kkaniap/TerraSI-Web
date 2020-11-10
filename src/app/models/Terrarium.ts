@@ -7,7 +7,7 @@ export interface Terrarium{
   name?: string;
   autoManagement?: boolean;
   terrariumSettings?: TerrariumSettings;
-  sensorReadsList?: SensorsReads[];
+  sensorsReadsList?: SensorsReads[];
   createDate?: Date;
   alerts?: Alert[];
 }

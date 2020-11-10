@@ -37,6 +37,7 @@ export class TerraDetailsComponent implements OnInit {
       this.terrarium = result;
       this.sunrise = this.terrariumService.convertTimeToNumber(this.terrarium.terrariumSettings.sunriseTime);
       this.sunset = this.terrariumService.convertTimeToNumber(this.terrarium.terrariumSettings.sunsetTime);
+      console.log(result.sensorsReadsList)
       this.isLoading = false;
       return;
     },
@@ -144,6 +145,32 @@ export class TerraDetailsComponent implements OnInit {
     ${this.iconHeight}${this.iconUnit},0);`;
   }
 
+  convertTemperature() {
+    if (this.terrarium.sensorsReadsList[this.terrarium.sensorsReadsList.length - 1].temperature <= 10) {
+      return 'height: ' + 0 + '%;';
+    } else if (this.terrarium.sensorsReadsList[this.terrarium.sensorsReadsList.length - 1].temperature > 10) {
+      let temp = this.terrarium.sensorsReadsList[this.terrarium.sensorsReadsList.length - 1].temperature;
+      return 'height: ' + (((temp - 10) * 2) - 1) + '%;';
+    }
+  }
 
+  convertHumidity() {
+    return 'height: ' + (this.terrarium.sensorsReadsList[this.terrarium.sensorsReadsList.length - 1].humidity - 1) + '%;';
+  }
 
+  convertBrightness() {
+    return 'height: ' + (this.terrarium.sensorsReadsList[this.terrarium.sensorsReadsList.length - 1].brightness - 1) + '%;';
+  }
+
+  convertUVA() {
+    return 'height: ' + ((this.terrarium.sensorsReadsList[this.terrarium.sensorsReadsList.length - 1].uvaLevel / 4) - 1) + '%;';
+  }
+
+  convertUVB() {
+    return 'height: ' + ((this.terrarium.sensorsReadsList[this.terrarium.sensorsReadsList.length - 1].uvbLevel / 4) - 1) + '%;';
+  }
+
+  convertWaterLevel() {
+    return 'height: ' + (this.terrarium.sensorsReadsList[this.terrarium.sensorsReadsList.length - 1].waterLevel - 1) + '%;';
+  }
 }
