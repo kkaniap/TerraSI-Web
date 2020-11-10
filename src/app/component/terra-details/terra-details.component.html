@@ -78,6 +78,9 @@
             <div class="vertical-progressbar-fill" [style]="convertTemperature()"></div>
           </div>
         </div>
+        <div class="vertical-progressbar-label">
+          {{terrarium.sensorsReadsList[terrarium.sensorsReadsList.length - 1].temperature}}°C
+        </div>
       </div>
 
       <div class="vertical-progressbar-wrapper">
@@ -89,6 +92,9 @@
           <div class="vertical-progressbar-background">
             <div class="vertical-progressbar-fill" [style]="convertHumidity()"></div>
           </div>
+        </div>
+        <div class="vertical-progressbar-label">
+          {{terrarium.sensorsReadsList[terrarium.sensorsReadsList.length - 1].humidity}}%
         </div>
       </div>
 
@@ -102,6 +108,9 @@
             <div class="vertical-progressbar-fill" [style]="convertBrightness()"></div>
           </div>
         </div>
+        <div class="vertical-progressbar-label">
+          {{terrarium.sensorsReadsList[terrarium.sensorsReadsList.length - 1].brightness}}%
+        </div>
       </div>
 
       <div class="vertical-progressbar-wrapper">
@@ -113,6 +122,9 @@
           <div class="vertical-progressbar-background">
             <div class="vertical-progressbar-fill" [style]="convertUVA()"></div>
           </div>
+        </div>
+        <div class="vertical-progressbar-label">
+          {{terrarium.sensorsReadsList[terrarium.sensorsReadsList.length - 1].uvaLevel}}nm
         </div>
       </div>
 
@@ -126,6 +138,9 @@
             <div class="vertical-progressbar-fill" [style]="convertUVB()"></div>
           </div>
         </div>
+        <div class="vertical-progressbar-label">
+          {{terrarium.sensorsReadsList[terrarium.sensorsReadsList.length - 1].uvbLevel}}nm
+        </div>
       </div>
 
       <div class="vertical-progressbar-wrapper">
@@ -137,6 +152,9 @@
           <div class="vertical-progressbar-background">
             <div class="vertical-progressbar-fill" [style]="convertWaterLevel()"></div>
           </div>
+        </div>
+        <div class="vertical-progressbar-label">
+          {{terrarium.sensorsReadsList[terrarium.sensorsReadsList.length - 1].waterLevel}}%
         </div>
       </div>
 

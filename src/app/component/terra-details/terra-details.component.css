@@ -193,6 +193,13 @@
   width: 70px;
 }
 
+.vertical-progressbar-label{
+  display: flex;
+  justify-content: center;
+  margin: 10px 0 0 10px;
+  color: #5a5959;
+}
+
 .vertical-progressbar {
   display: flex;
   margin-top: 1vw;
