@@ -1,4 +1,4 @@
-import {Component, HostListener, Input, OnInit} from '@angular/core';
+import {Component, HostListener, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
 import {TerrariumService} from '../../services/TerrariumService';
 import {HttpErrorResponse} from '@angular/common/http';
@@ -25,7 +25,7 @@ export class TerraDetailsComponent implements OnInit {
   terrarium: Terrarium;
   isLoading: boolean;
 
-  constructor(private router: Router, private terrariumService: TerrariumService) {
+  constructor(private router: Router, public terrariumService: TerrariumService) {
     this.setIconSize();
   }
 
@@ -37,22 +37,26 @@ export class TerraDetailsComponent implements OnInit {
       this.terrarium = result;
       this.sunrise = this.terrariumService.convertTimeToNumber(this.terrarium.terrariumSettings.sunriseTime);
       this.sunset = this.terrariumService.convertTimeToNumber(this.terrarium.terrariumSettings.sunsetTime);
-      console.log(result.sensorsReadsList)
       this.isLoading = false;
       return;
     },
       error => {
-        if(error instanceof HttpErrorResponse && (error.status === 401 || error.status === 404)){
+        if(error instanceof HttpErrorResponse && (error.status === 401 || error.status === 404 || error.status === 403)){
           this.router.navigate(['/terrariums']);
           return;
         }
       })
   }
 
+  sendSettings() {
+    this.terrariumService.sendSettings(this.terrarium.id, this.terrarium.terrariumSettings).subscribe();
+  }
+
   timeToDecimal(id: string): void{
     if(id === 'sunrise-input'){
       let time = (<HTMLInputElement>document.getElementById(id)).value;
       this.sunrise = this.terrariumService.convertTimeToNumber(time);
+      this.terrarium.terrariumSettings.sunriseTime = time;
     }
     else if(id === 'sunset-input'){
       let time = (<HTMLInputElement>document.getElementById(id)).value;
@@ -64,13 +68,27 @@ export class TerraDetailsComponent implements OnInit {
     if(id === 'sunrise-input'){
       let hours = Math.floor(this.sunrise);
       let minutes = Math.floor((this.sunrise - hours) * 60);
-      return hours + ':' + (minutes===0 ? '00' :  minutes);
+      return (hours < 10 ? '0' + hours : hours) + ':' + (minutes===0 ? '00' :  minutes);
     }
     else if(id === 'sunset-input'){
       let hours = Math.floor(this.sunset);
       let minutes = Math.floor((this.sunset - hours) * 60);
-      return hours + ':' + (minutes===0 ? '00' :  minutes);
+      return (hours < 10 ? '0' + hours : hours) + ':' + (minutes===0 ? '00' :  minutes);
     }
+  }
+
+  sunriseSliderChange(value: number){
+    let hours = Math.floor(value);
+    let minutes = Math.floor((value - hours) * 60);
+    this.sunrise = value;
+    this.terrarium.terrariumSettings.sunriseTime = (hours < 10 ? '0' + hours : hours) + ':' + (minutes === 0 ? '00' : minutes);
+  }
+
+  sunsetSliderChange(value: number) {
+    let hours = Math.floor(value);
+    let minutes = Math.floor((value - hours) * 60);
+    this.sunset = value;
+    this.terrarium.terrariumSettings.sunsetTime = (hours < 10 ? '0' + hours : hours) + ':' + (minutes === 0 ? '00' : minutes);
   }
 
   timeLabel(value: number | null) {
@@ -173,4 +191,6 @@ export class TerraDetailsComponent implements OnInit {
   convertWaterLevel() {
     return 'height: ' + (this.terrarium.sensorsReadsList[this.terrarium.sensorsReadsList.length - 1].waterLevel - 1) + '%;';
   }
+
+
 }

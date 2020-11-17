@@ -80,6 +80,18 @@
   caret-color: #252a37;
 }
 
+/*send button*/
+::ng-deep .mat-raised-button{
+  width: 10vw;
+  margin-bottom: 1vw;
+  background-color: #252a37 !important;
+  color: white;
+}
+
+::ng-deep .mat-raised-button:hover{
+  background-color: #797979 !important;
+}
+
 .terra-details-top-right {
   display: flex;
   flex-direction: row;

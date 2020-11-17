@@ -18,8 +18,8 @@ export class AuthInterceptor implements HttpInterceptor{
       req = this.addToken(req, localStorage.getItem('accessToken'));
     }
     return next.handle(req).pipe(catchError(err => {
-      if(err instanceof HttpErrorResponse && err.status === 401
-        && (err.error.message === 'Token expired' || err.error.message === 'Enter valid token')){
+
+      if(err instanceof HttpErrorResponse && err.status === 401){
         return this.handle401Error(req, next);
       } else {
         return throwError(err);

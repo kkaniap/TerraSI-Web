@@ -19,6 +19,8 @@
           <input matInput [value]="terrarium.name">
         </mat-form-field>
 
+        <button mat-raised-button (click)="sendSettings()">Send</button>
+
       </div>
 
       <div class="terra-details-top-right">
@@ -42,7 +44,7 @@
           <img src="assets/terrariumsAssets/sunrise.png" alt="sunrise_icon" class="terra-details-top-right-sun-icon">
           <img src="assets/terrariumsAssets/sunrise-fill.png" alt="sunrise_icon"
                class="terra-details-top-right-sun-icon__fill" style="{{fillSunrise()}}">
-          <mat-slider id="sunrise-slider" vertical thumbLabel min="0" max="24" step="0.5" [displayWith]="timeLabel" [(ngModel)]="sunrise"></mat-slider>
+          <mat-slider id="sunrise-slider" vertical thumbLabel min="0" max="24" step="0.5" [displayWith]="timeLabel" [ngModel]="terrariumService.convertTimeToNumber(terrarium.terrariumSettings.sunriseTime)" (change)="sunriseSliderChange(sunriseSlider.value)" #sunriseSlider></mat-slider>
           <input id="sunrise-input" [ngModel]="decimalToTime(sunriseInput.id)" (change)="timeToDecimal(sunriseInput.id)" #sunriseInput>
         </div>
 
@@ -50,7 +52,7 @@
           <img src="assets/terrariumsAssets/sunset.png" alt="sunset_icon" class="terra-details-top-right-sun-icon">
           <img src="assets/terrariumsAssets/sunset-fill.png" alt="sunset_icon"
                class="terra-details-top-right-sun-icon__fill" style="{{fillSunset()}}">
-          <mat-slider vertical thumbLabel min="0" max="24" step="0.5" [displayWith]="timeLabel" [(ngModel)]="sunset"></mat-slider>
+          <mat-slider vertical thumbLabel min="0" max="24" step="0.5" [displayWith]="timeLabel" [ngModel]="terrariumService.convertTimeToNumber(terrarium.terrariumSettings.sunsetTime)" (change)="sunsetSliderChange(sunsetSlider.value)" #sunsetSlider></mat-slider>
           <input id="sunset-input" [ngModel]="decimalToTime(sunsetInput.id)" (change)="timeToDecimal(sunsetInput.id)" #sunsetInput>
         </div>
 

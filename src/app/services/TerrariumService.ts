@@ -1,8 +1,9 @@
 import {Injectable} from '@angular/core';
-import {HttpClient} from '@angular/common/http';
+import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {Terrarium, TerrariumResponse} from '../models/Terrarium';
 import {environment} from '../../environments/environment';
+import {TerrariumSettings} from '../models/TerrariumSettings';
 
 @Injectable()
 export class TerrariumService{
@@ -22,6 +23,10 @@ export class TerrariumService{
     let hours = Number(hoursMinutes[0]);
     let minutes = (Number(hoursMinutes[1]) / 60);
     return hours + minutes;
+  }
+
+  sendSettings(id: number, settings: TerrariumSettings): Observable<any>{
+    return this.http.put(environment.hostURL + '/terrariums/' + id + '/settings', settings, {responseType: 'text'});
   }
 
 }
