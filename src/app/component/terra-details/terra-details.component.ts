@@ -18,6 +18,8 @@ export class TerraDetailsComponent implements OnInit {
   tearWidth: number;
   sunWidth: number;
 
+
+  name: string;
   sunrise: number;
   sunset: number;
   sunSpeed = 0;
@@ -49,6 +51,10 @@ export class TerraDetailsComponent implements OnInit {
   }
 
   sendSettings() {
+    if(this.name !== this.terrarium.name && this.name != null){
+      this.terrarium.name = this.name;
+      this.terrariumService.updateName(this.terrarium.id, this.name).subscribe();
+    }
     this.terrariumService.sendSettings(this.terrarium.id, this.terrarium.terrariumSettings).subscribe();
   }
 

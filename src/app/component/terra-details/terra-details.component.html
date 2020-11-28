@@ -16,7 +16,7 @@
 
         <mat-form-field>
           <mat-label>Name</mat-label>
-          <input matInput [value]="terrarium.name">
+          <input matInput [value]="terrarium.name" (change)="name = nameInput.value" #nameInput>
         </mat-form-field>
 
         <button mat-raised-button (click)="sendSettings()">Send</button>

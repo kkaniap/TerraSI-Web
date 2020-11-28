@@ -29,4 +29,8 @@ export class TerrariumService{
     return this.http.put(environment.hostURL + '/terrariums/' + id + '/settings', settings, {responseType: 'text'});
   }
 
+  updateName(id: number, name: string): Observable<any>{
+    return this.http.patch(environment.hostURL + '/terrariums/' + id + '/name', name, {responseType: 'text'});
+  }
+
 }
