@@ -5,4 +5,6 @@ export interface TerrariumSettings{
   sunriseTime?: string;
   sunsetTime?: string;
   sunSpeed?: number;
+  isBulbWorking?: boolean;
+  autoManagement?: boolean;
 }

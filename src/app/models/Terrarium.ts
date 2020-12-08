@@ -5,7 +5,6 @@ import {Alert} from './Alert';
 export interface Terrarium{
   id?: number;
   name?: string;
-  autoManagement?: boolean;
   terrariumSettings?: TerrariumSettings;
   sensorsReadsList?: SensorsReads[];
   createDate?: Date;

@@ -20,6 +20,7 @@ export class TerraDetailsComponent implements OnInit {
 
 
   name: string;
+  autoManagement: boolean;
   sunrise: number;
   sunset: number;
   sunSpeed = 0;
@@ -39,6 +40,7 @@ export class TerraDetailsComponent implements OnInit {
       this.terrarium = result;
       this.sunrise = this.terrariumService.convertTimeToNumber(this.terrarium.terrariumSettings.sunriseTime);
       this.sunset = this.terrariumService.convertTimeToNumber(this.terrarium.terrariumSettings.sunsetTime);
+      this.autoManagement = result.terrariumSettings.autoManagement;
       this.isLoading = false;
       return;
     },
@@ -55,7 +57,20 @@ export class TerraDetailsComponent implements OnInit {
       this.terrarium.name = this.name;
       this.terrariumService.updateName(this.terrarium.id, this.name).subscribe();
     }
-    this.terrariumService.sendSettings(this.terrarium.id, this.terrarium.terrariumSettings).subscribe();
+    this.terrariumService.sendSettings(this.terrarium.id, this.terrarium.terrariumSettings).subscribe(
+      result => {
+        if(this.autoManagement !== this.terrarium.terrariumSettings.autoManagement){
+          this.autoManagement = !this.autoManagement;
+        }
+      }
+    );
+  }
+
+  bulbOnOff(){
+    if(this.autoManagement === false){
+      this.terrarium.terrariumSettings.isBulbWorking = !this.terrarium.terrariumSettings.isBulbWorking;
+      this.terrariumService.bulbOnOff(this.terrarium.id, this.terrarium.terrariumSettings.isBulbWorking).subscribe();
+    }
   }
 
   timeToDecimal(id: string): void{

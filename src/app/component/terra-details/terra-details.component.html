@@ -6,7 +6,7 @@
       <div class="terra-details-top-left">
         <div class="terra-details-top-left-container">
           <img src="assets/terrariumsAssets/robot.png" class="robot-img" alt="turn_ON_SI">
-          <mat-slide-toggle [checked]="terrarium.autoManagement"></mat-slide-toggle>
+          <mat-slide-toggle [checked]="terrarium.terrariumSettings.autoManagement" (change)="terrarium.terrariumSettings.autoManagement = !terrarium.terrariumSettings.autoManagement"></mat-slide-toggle>
           <span>OFF / ON</span>
         </div>
       </div>
@@ -167,12 +167,12 @@
     <div class="terra-details-bottom">
       <div class="terra-details-bottom-item">
         <img src="assets/terrariumsAssets/brightness.png" alt="brightness_icon" class="brightness-icon">
-        <mat-slide-toggle></mat-slide-toggle>
+        <mat-slide-toggle [disabled]="autoManagement" [ngModel]="terrarium.terrariumSettings.isBulbWorking" (change)="bulbOnOff()"></mat-slide-toggle>
         <span>OFF / ON</span>
       </div>
       <div class="terra-details-bottom-item">
         <img src="assets/terrariumsAssets/tear-fill.png" alt="humidity_icon" class="humidity-icon">
-        <mat-slide-toggle></mat-slide-toggle>
+        <mat-slide-toggle [disabled]="autoManagement" ></mat-slide-toggle>
         <span>OFF / ON</span>
       </div>
     </div>

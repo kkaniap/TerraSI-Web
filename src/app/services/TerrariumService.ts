@@ -33,4 +33,8 @@ export class TerrariumService{
     return this.http.patch(environment.hostURL + '/terrariums/' + id + '/name', name, {responseType: 'text'});
   }
 
+  bulbOnOff(id: number, isTurnedOn: boolean): Observable<any>{
+    return this.http.post(environment.hostURL + '/terrariums/' + id + '/bulbOnOf', '', {responseType: 'text'})
+  }
+
 }
