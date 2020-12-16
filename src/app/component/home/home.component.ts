@@ -24,14 +24,6 @@ export class HomeComponent implements OnInit {
       this.lastNews = this.newsList._embedded.newsList.pop();
       this.newsList._embedded.newsList = this.newsList._embedded.newsList.reverse();
       this.isLoading = false;
-      this.http.get('https://192.168.55.109/kania',{responseType: 'text'}).subscribe(
-        result => {
-          console.log(result);
-        },
-        error => {
-          console.log(error);
-        }
-      )
     });
   }
 }
