@@ -172,7 +172,7 @@
       </div>
       <div class="terra-details-bottom-item">
         <img src="assets/terrariumsAssets/tear-fill.png" alt="humidity_icon" class="humidity-icon">
-        <mat-slide-toggle [disabled]="autoManagement" ></mat-slide-toggle>
+        <mat-slide-toggle [disabled]="autoManagement" [ngModel]="terrarium.terrariumSettings.isHumidifierWorking" (change)="humidifierOnOff()"></mat-slide-toggle>
         <span>OFF / ON</span>
       </div>
     </div>

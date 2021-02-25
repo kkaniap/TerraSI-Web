@@ -73,6 +73,13 @@ export class TerraDetailsComponent implements OnInit {
     }
   }
 
+  humidifierOnOff() {
+    if(this.autoManagement === false){
+      this.terrarium.terrariumSettings.isHumidifierWorking = !this.terrarium.terrariumSettings.isHumidifierWorking;
+      this.terrariumService.humidifierOnOff(this.terrarium.id, this.terrarium.terrariumSettings.isHumidifierWorking).subscribe();
+    }
+  }
+
   timeToDecimal(id: string): void{
     if(id === 'sunrise-input'){
       let time = (<HTMLInputElement>document.getElementById(id)).value;

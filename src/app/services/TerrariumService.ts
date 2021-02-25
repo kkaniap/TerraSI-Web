@@ -37,4 +37,7 @@ export class TerrariumService{
     return this.http.post(environment.hostURL + '/terrariums/' + id + '/bulbOnOf', '', {responseType: 'text'})
   }
 
+  humidifierOnOff(id: number, isTurnedOn: boolean): Observable<any>{
+    return this.http.post(environment.hostURL + '/terrariums/' + id + '/humidifierOnOff', '', {responseType: 'text'})
+  }
 }

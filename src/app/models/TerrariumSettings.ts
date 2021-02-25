@@ -6,5 +6,6 @@ export interface TerrariumSettings{
   sunsetTime?: string;
   sunSpeed?: number;
   isBulbWorking?: boolean;
+  isHumidifierWorking?: boolean;
   autoManagement?: boolean;
 }
