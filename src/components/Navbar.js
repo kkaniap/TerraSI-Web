@@ -1,6 +1,6 @@
 import './Navbar.css';
 import React, { useState } from 'react';
-import { BsBell } from 'react-icons/bs';
+import { BsBell, BsFillExclamationCircleFill } from 'react-icons/bs';
 
 
 const Navbar  = () => {
@@ -23,6 +23,10 @@ const Navbar  = () => {
         isOpen = !isOpen;
     }
 
+    const toggleNotification = () => {
+        console.log('kania123');
+    }
+
     return (  
         <nav className='navbar'>
             <div className='navbar-content'>
@@ -39,7 +43,7 @@ const Navbar  = () => {
                         <a>Settings</a>
                         <a>Logout</a>
                     </div>
-                    <button id='notification-bell'>
+                    <button id='notification-bell' onClick={toggleNotification}>
                         <BsBell />
                     </button>
                     <div className='list-menu'>
@@ -49,6 +53,27 @@ const Navbar  = () => {
                         <a>Logout</a>
                     </div>
                 </div>
+            </div>
+            <div id='notifications'>
+                <a className='notification'>
+                    <div className='notification__icon'>
+                        <BsFillExclamationCircleFill />
+                    </div>
+                    <div className='notification__content'>
+                        <b>Name</b><br />
+                        <span>High temperature in terrarium</span>
+                    </div>
+                </a>
+
+                <a className='notification'>
+                    <div className='notification__icon'>
+                        <BsFillExclamationCircleFill />
+                    </div>
+                    <div className='notification__content'>
+                        <b>Name</b><br />
+                        <span>High temperature in terrarium</span>
+                    </div>
+                </a>
             </div>
         </nav>
     );
