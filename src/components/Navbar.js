@@ -42,6 +42,12 @@ const Navbar  = () => {
                     <button id='notification-bell'>
                         <BsBell />
                     </button>
+                    <div className='list-menu'>
+                        <a>Home</a>
+                        <a>Terrariums</a>
+                        <a>Settings</a>
+                        <a>Logout</a>
+                    </div>
                 </div>
             </div>
         </nav>
