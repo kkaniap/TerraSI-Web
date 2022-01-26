@@ -29,7 +29,7 @@
     align-items: center;
 }
 
-.list-menu{
+.desktop-menu{
     display: none;
 }
 
@@ -44,7 +44,7 @@
     cursor: pointer;
     padding: 0;
     transition: all 0.3s linear;
-    z-index: 10;
+    z-index: 30;
 }
 
 .hamburger-icon span {
@@ -84,6 +84,7 @@
     transition: transform 0.5s ease-in-out;
     transform: translateX(100%);
     opacity: 0.9;
+    z-index: 20;
 }
 
 .hamburger-menu--open{
@@ -119,69 +120,34 @@
     width: 2.4em;
 }
 
-#notifications{
-    width: 90%;
-    margin: 2vh auto;
-    padding: 0.5em;
-    max-height: 30vh;
-    display: flex;
-    flex-direction: column;
-    border-radius: 4px;
-    background-color: #FFF;
-    box-shadow: 0px 3px 7px -2px rgb(162 162 172);
-    z-index: 10;
-}
-
-.notification{
-    display: grid;
-    grid-template-columns: fit-content(5%) 1fr;
-}
-
-.notification__icon{
-    display: flex;
-    align-items: center;
-    grid-column: 1;
-}
-
-.notification__icon svg{
-    height: 2rem;
-    width: 2rem;
-    margin: 0.6em;
-}
-
-.notification__content{
-    grid-column: 2;
-    margin: 0.5em 1em 0.5em 0;
-    overflow-wrap: anywhere;
-}
-
 @media (min-width: 1025px) {
 
     .navbar-content{
         grid-template-columns: 10% 90%;
     }
 
-    .list-menu{
+    .desktop-menu{
         width: 100%;
         display: inline;
     }
 
-    .list-menu a:first-child{
+    .desktop-menu a:first-child{
         margin-left: 0;
     }
 
-    .list-menu a{
+    .desktop-menu a{
+        position: relative;
+        top: 0;
         margin-left: 3rem;
         font-size: 1rem;
         font-weight: bold;
         letter-spacing: 0.1rem;
         color: black;
         text-decoration: none;
-        transition: all 0.2s linear;
     }
 
-    .list-menu a:hover{
-        font-size: 1.1rem;
+    .desktop-menu a:hover{    
+        top: -5px;
     }
 
     #hamburger-icon{
