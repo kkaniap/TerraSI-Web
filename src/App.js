@@ -10,7 +10,8 @@ function App() {
     <Router>
       <div className="App">
         <Navbar />
-        <div className="content">
+        
+        <div className="content" onClick={() => {document.getElementById('notifications').classList.remove('notifications--show')}}>
           <Routes>
             <Route path="/" element={<Home />} />
           </Routes>
