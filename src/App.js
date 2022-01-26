@@ -1,7 +1,6 @@
-import logo from './logo.svg';
 import './App.css';
-import Navbar from './components/Navbar';
-import Home from './components/Home';
+import Navbar from './components/navbar/Navbar';
+import Home from './components/home/Home';
 import {BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 
@@ -11,7 +10,7 @@ function App() {
       <div className="App">
         <Navbar />
         
-        <div className="content" onClick={() => {document.getElementById('notifications').classList.remove('notifications--show')}}>
+        <div className="content">
           <Routes>
             <Route path="/" element={<Home />} />
           </Routes>

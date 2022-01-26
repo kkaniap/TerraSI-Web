@@ -1,4 +1,4 @@
-import { BsBell, BsFillExclamationCircleFill } from 'react-icons/bs';
+import { BsFillExclamationCircleFill } from 'react-icons/bs';
 import {MdClose} from 'react-icons/md';
 import './Notifications.css';
 

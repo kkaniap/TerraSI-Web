@@ -1,6 +1,6 @@
 import './Navbar.css';
-import { BsBell, BsFillExclamationCircleFill } from 'react-icons/bs';
-import Notifications from './Notifications';
+import { BsBell } from 'react-icons/bs';
+import Notifications from '../notifications/Notifications';
 import { useState, useEffect } from 'react';
 
 const Navbar  = () => {
