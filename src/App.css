@@ -1,11 +1,16 @@
 .App {
-  height: 100vh;
+  height: 100%;
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: 10% 90%;
+  grid-template-rows: 8% 92%;
   background-color: #F4F7F6;
 }
 
+#root{
+  height: 100%;
+}
+
 .content{
+  height: 90%;
   z-index: 1;
 }

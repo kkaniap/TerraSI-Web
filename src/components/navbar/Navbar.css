@@ -14,12 +14,17 @@
     grid-template-rows: 100%;   
 }
 
-.logo{
+.logo {
     margin-left: 20px;
     display: flex;
     align-items: center;
     font-size: 5rem;
     font-family: 'East Sea Dokdo', cursive;
+}
+
+.logo a{
+    text-decoration: none;
+    color: black;
 }
 
 .navbar-menu{
@@ -113,6 +118,7 @@
     top: 2px;
     border: none;
     background: transparent;
+    cursor: pointer;
 }
 
 #notification-bell svg{
@@ -144,6 +150,7 @@
         letter-spacing: 0.1rem;
         color: black;
         text-decoration: none;
+        cursor: pointer;
     }
 
     .desktop-menu a:hover{    

@@ -2,6 +2,7 @@ import './Navbar.css';
 import { BsBell } from 'react-icons/bs';
 import Notifications from '../notifications/Notifications';
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 const Navbar  = () => {
 
@@ -36,7 +37,11 @@ const Navbar  = () => {
     return (  
         <nav className='navbar'>
             <div className='navbar-content'>
-                <div className='logo'>T</div>
+                <div className='logo'>
+                    <Link to='/'>
+                        T
+                    </Link>
+                </div>
                 <div className='navbar-menu'>
                     <div id='hamburger-icon' className='hamburger-icon' onClick={() => setIsHamburgerOpen(!isHamburgerOpen)}>
                         <span></span>
@@ -44,7 +49,7 @@ const Navbar  = () => {
                         <span></span>
                     </div>
                     <div id='hamburger-menu' className='hamburger-menu'>
-                        <a>Home</a>
+                        <Link to='/'> Home </Link>
                         <a>Terrariums</a>
                         <a>Settings</a>
                         <a>Logout</a>
@@ -53,7 +58,7 @@ const Navbar  = () => {
                         <BsBell />
                     </button>
                     <div className='desktop-menu'>
-                        <a>Home</a>
+                        <Link to='/'> Home </Link>
                         <a>Terrariums</a>
                         <a>Settings</a>
                         <a>Logout</a>

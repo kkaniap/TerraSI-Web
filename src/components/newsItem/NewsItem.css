@@ -1,3 +1,8 @@
+.hiperlink{
+    color: black;
+    text-decoration: none;
+}
+
 .news-container{
     min-width: 200px;
     width: 70vw;
@@ -17,11 +22,13 @@
 .news__img img{
     position: relative;
     top: -1px;
-    width: 100%;
+    left: -1px;
+    width: 302px;
     border-radius: 7px;
 }
 
 .news__title{
+    text-decoration: none;
     margin: 0;
     padding: 0 1em;
     text-align: center;
