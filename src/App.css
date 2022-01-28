@@ -1,12 +1,9 @@
 .App {
-  height: 100%;
-  display: grid;
-  grid-template-columns: 100%;
-  grid-template-rows: 8% 92%;
+  min-height: 100vh;
   background-color: #F4F7F6;
 }
 
 .content{
-  height: 90%;
+  height: 100%;
   z-index: 1;
 }
