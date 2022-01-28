@@ -1,0 +1,42 @@
+.news-details-container{
+    height: 100%;
+    padding:  1.5rem;
+}
+
+.img-header{
+    width: 95%;
+    margin: 0 auto;
+    display: block;
+    border-radius: 5px;
+}
+
+.details__title{
+    text-align: center;
+}
+
+.details__content{
+    padding: 0 1em;
+    font-size: 1em;
+}
+
+@media (min-width: 700px){
+    .details__title{
+        font-size: 2em;
+    }
+
+    .details__content{
+        font-size: 1.5em;
+    }
+}
+
+@media (min-width: 1025px){
+    .img-header{
+        width: 50%;
+        max-width: 600px;
+    }
+
+    .details__content{
+        padding: 0 20em;
+        font-size: 1.2em;
+    }
+}
