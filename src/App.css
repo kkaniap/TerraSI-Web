@@ -6,10 +6,6 @@
   background-color: #F4F7F6;
 }
 
-#root{
-  height: 100%;
-}
-
 .content{
   height: 90%;
   z-index: 1;
