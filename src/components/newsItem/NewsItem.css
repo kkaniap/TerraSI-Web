@@ -20,7 +20,7 @@
 }
 
 .news__img img{
-    width: calc(70vw + 2px);
+    width: calc(100% + 2px);
     position: relative;
     top: -1px;
     left: -1px;
