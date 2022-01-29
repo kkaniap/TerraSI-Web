@@ -50,7 +50,7 @@ const Navbar  = () => {
                     </div>
                     <div id='hamburger-menu' className='hamburger-menu'>
                         <Link to='/'> Home </Link>
-                        <a>Terrariums</a>
+                        <Link to='/terrariums'> Terrariums </Link>
                         <a>Settings</a>
                         <a>Logout</a>
                     </div>
@@ -59,7 +59,7 @@ const Navbar  = () => {
                     </button>
                     <div className='desktop-menu'>
                         <Link to='/'> Home </Link>
-                        <a>Terrariums</a>
+                        <Link to='/terrariums'> Terrariums </Link>
                         <a>Settings</a>
                         <a>Logout</a>
                     </div>
