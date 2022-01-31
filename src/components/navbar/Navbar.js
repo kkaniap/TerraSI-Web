@@ -49,17 +49,17 @@ const Navbar  = () => {
                         <span></span>
                     </div>
                     <div id='hamburger-menu' className='hamburger-menu'>
-                        <Link to='/'> Home </Link>
-                        <a>Terrariums</a>
-                        <a>Settings</a>
-                        <a>Logout</a>
+                        <Link to='/' onClick={ () => { setIsHamburgerOpen(false) } } > Home </Link>
+                        <Link to='/terrariums' onClick={ () => { setIsHamburgerOpen(false) } } > Terrariums </Link>
+                        <Link to='/' onClick={ () => { setIsHamburgerOpen(false) } } > Settings </Link>
+                        <Link to='/' onClick={ () => { setIsHamburgerOpen(false) } } > Logout </Link>
                     </div>
                     <button id='notification-bell' onClick={() => setIsNotificationsOpen(!isNotificationsOpen)}>
                         <BsBell />
                     </button>
                     <div className='desktop-menu'>
                         <Link to='/'> Home </Link>
-                        <a>Terrariums</a>
+                        <Link to='/terrariums'> Terrariums </Link>
                         <a>Settings</a>
                         <a>Logout</a>
                     </div>
