@@ -29,6 +29,86 @@
     cursor: pointer;
 }
 
+.change-name-container{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color:rgba(0,0,0,0.5);
+    z-index: 30;
+}
+
+.change-name-container--open{
+    display: flex;
+}
+
+.change-name{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 80%;
+    min-height: 180px;
+    position: relative;
+    background-color: #FFF;
+    border-radius: 7px;
+    transform: translateY(-300%);
+}
+
+.change-name--open{
+    transform: translateY(0);
+}
+
+.close-btn{
+    position: absolute;
+    top: 1%;
+    right: -1px;
+    transform: scale(0.8);
+    cursor: pointer;
+}
+
+.change-name p{
+    margin: 0;
+    color: red;
+    font-weight: bold;
+}
+
+.change-name input[type=text] {
+    width: 70%;
+    height: 3em;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #bebebe;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.change-name input[type=text]:focus{
+    border: 2px solid #bebebe;
+    outline: none;
+}
+
+.save-btn{
+    width: 70%;
+    height: 3em;
+    border: 1px solid #bebebe;
+    border-radius: 4px;
+    background-color: transparent;
+}
+
+.save-btn:hover{
+    background-color: #bebebe;
+}
+
+.save-btn:active{
+    background-color: #929292;
+}
+
 .terrarium-item__img{
     border-bottom: 1px solid #bebebe;
     border-radius: 7px;

@@ -127,6 +127,10 @@
 
 @media (min-width: 1025px) {
 
+    .navbar{
+        height: 9vh;
+    }
+
     .navbar-content{
         grid-template-columns: 10% 90%;
     }
