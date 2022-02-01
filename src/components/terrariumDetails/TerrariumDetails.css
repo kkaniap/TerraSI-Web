@@ -2,12 +2,13 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 2em;
 }
 
 .details-item{
     width: 300px;
     min-height: 210px;
-    margin-top: 1em;
+    margin-top: 2em;
     position: relative;
     background-color: #FFF;
     border: 1px solid #eee; 

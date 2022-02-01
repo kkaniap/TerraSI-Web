@@ -10,7 +10,21 @@ const TerrariumDetails = () => {
                 <h2 className='details-item__title'>Temperature</h2>
                 <GaugeChart 
                     id="temperature-gauge"
-                    nrOfLevels={7}
+                    nrOfLevels={3}
+                    arcPadding={0.02}
+                    percent={0.9} 
+                    textColor="#000"
+                    formatTextValue={() => 40 +'\u00b0C'}
+                />
+            </div>
+
+            <div id='temperature-item' className='details-item'>
+                <button className='gear-btn' ><BsGearFill /></button>
+                <h2 className='details-item__title'>Temperature</h2>
+                <GaugeChart 
+                    id="temperature-gauge"
+                    nrOfLevels={3}
+                    arcPadding={0.02}
                     percent={0.9} 
                     textColor="#000"
                     formatTextValue={() => 40 +'\u00b0C'}
