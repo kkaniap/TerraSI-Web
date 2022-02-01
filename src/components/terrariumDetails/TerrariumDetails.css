@@ -8,13 +8,23 @@
 .details-item{
     width: 300px;
     min-height: 210px;
-    margin-top: 2em;
     position: relative;
     background-color: #FFF;
     border: 1px solid #eee; 
     border-radius: 7px;
     box-shadow: 0px 6px 15px -8px rgb(66 68 90);
     overflow-wrap: break-word;
+}
+
+.details-item:first-of-type{
+    margin-top: 2em;
+}
+
+.details-item--slider{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .gear-btn{
@@ -24,10 +34,11 @@
     transform: scale(1.8);
 }
 
-.details-item h2{
+.details-item__title{
     margin: 10px 0 5px 0;
     text-align: center;
     font-size: 1.3em;
+    color: #464A4F;
 }
 
 div[id$="gauge"] svg{
@@ -37,5 +48,15 @@ div[id$="gauge"] svg{
 .text-group text{
     font-weight: bold;
     transform: translateY(50%);
+}
+
+#temperature-set div{
+    margin: 0 !important;
+}
+
+@media (min-width: 636px){
+    .details-item{
+        margin-top: 2em;
+    }
 }
 
