@@ -1,0 +1,40 @@
+.terrarium-details-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.details-item{
+    width: 300px;
+    min-height: 210px;
+    margin-top: 1em;
+    position: relative;
+    background-color: #FFF;
+    border: 1px solid #eee; 
+    border-radius: 7px;
+    box-shadow: 0px 6px 15px -8px rgb(66 68 90);
+    overflow-wrap: break-word;
+}
+
+.gear-btn{
+    position: absolute;
+    top: 7%;
+    right: 3%;
+    transform: scale(1.8);
+}
+
+.details-item h2{
+    margin: 10px 0 5px 0;
+    text-align: center;
+    font-size: 1.3em;
+}
+
+div[id$="gauge"] svg{
+    overflow: visible;
+}
+
+.text-group text{
+    font-weight: bold;
+    transform: translateY(50%);
+}
+

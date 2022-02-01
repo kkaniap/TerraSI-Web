@@ -45,7 +45,7 @@ const Terrariums = () => {
     
             <div className='terrarium-item'>
                 <button className='gear-btn' onClick={ () => setChangeNameOpen(true) }><BsGearFill /></button>
-                <Link to='/' >
+                <Link to='/terrariums/1' >
                     <div className='terrarium-item__img' >
                         <img src='/images/lizard.svg' />
                     </div>
@@ -55,7 +55,7 @@ const Terrariums = () => {
 
             <div className='terrarium-item'>
                 <button className='gear-btn' onClick={ () => setChangeNameOpen(true) }><BsGearFill /></button>
-                <Link to='/' >
+                <Link to='/terrariums/1' >
                     <div className='terrarium-item__img' >
                         <img src='/images/spider.svg' />
                     </div>
@@ -65,7 +65,7 @@ const Terrariums = () => {
 
             <div className='terrarium-item'>
                 <button className='gear-btn' onClick={ () => setChangeNameOpen(true) }><BsGearFill /></button>
-                <Link to='/' >
+                <Link to='/terrariums/1' >
                     <div className='terrarium-item__img' >
                         <img src='/images/snake.svg' />
                     </div>
