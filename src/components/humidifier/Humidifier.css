@@ -1,0 +1,13 @@
+.custom-switch{
+    left: 41%;
+    top: 25%;
+    transform: scale(2);
+}
+
+.react-switch-bg{
+    background-color: #4e4e4e !important;
+}
+
+.react-switch-handle:active {
+    box-shadow: #c4c4c4 0px 0px 2px 3px !important;
+}

@@ -4,8 +4,13 @@ import {BsGearFill} from 'react-icons/bs';
 import CircularSlider from 'advanced-react-circular-slider';
 import 'advanced-react-circular-slider/main.css';
 import TimePicker from '../timePicker/TimePicker';
+import Humidifier from '../humidifier/Humidifier';
 
 const TerrariumDetails = () => {
+
+    let isHumidifierOn = false;
+    let sunriseTimeType = 'AM';
+    let sunsetTimeType = 'AM'
 
     return (  
         <div className='terrarium-details-container'>
@@ -97,13 +102,19 @@ const TerrariumDetails = () => {
 
             <div id='sunrise-set' className='details-item'>
                 <h2 className='details-item__title'>Sunrise time</h2>
-                <TimePicker componentName={'sunrise-time'}/>
+                <TimePicker componentName={'sunrise-time'} changeTimeType={value => {sunriseTimeType = value}} />
             </div>
 
             <div id='sunset-set' className='details-item'>
                 <h2 className='details-item__title'>Sunset time</h2>
-                <TimePicker componentName={'sunset-time'}/>
+                <TimePicker componentName={'sunset-time'} changeTimeType={value => {sunsetTimeType = value}} />
             </div>
+
+            <div id='humidifier-set' className='details-item'>
+                <h2 className='details-item__title'>Humidifier</h2>
+                <Humidifier changeIsHumidifierOn={value => {isHumidifierOn = value}} isHumidifierOn={isHumidifierOn}/>
+            </div>
+
         </div>
     );
 }

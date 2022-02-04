@@ -7,6 +7,11 @@ const TimePicker = (props) => {
 
     const [timeType, setTimeType] = useState('AM');
 
+    const changeTimeType = (value) => {
+        props.changeTimeType(value);
+        setTimeType(value);
+    }
+
     const hoursValidation = (e) => {
         if(e.target.value > 12 || e.target.value < 0){
             e.target.classList.add('time-picker-error');
@@ -52,8 +57,8 @@ const TimePicker = (props) => {
                 <IoIosArrowDown />
             </div>
             <div className='time-type'>
-                <button id='time-am' onClick={() => setTimeType('AM')}>AM</button>
-                <button id='time-pm' onClick={() => setTimeType('PM')}>PM</button>
+                <button id='time-am' onClick={() => changeTimeType('AM')}>AM</button>
+                <button id='time-pm' onClick={() => changeTimeType('PM')}>PM</button>
             </div>
         </div>
      );
