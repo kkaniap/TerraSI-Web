@@ -6,6 +6,12 @@
     padding-bottom: 2em;
 }
 
+.css-mz0q36{
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+}
+
 .details-item{
     width: 300px;
     min-height: 210px;
