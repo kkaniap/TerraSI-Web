@@ -5,12 +5,24 @@ import CircularSlider from 'advanced-react-circular-slider';
 import 'advanced-react-circular-slider/main.css';
 import TimePicker from '../timePicker/TimePicker';
 import Humidifier from '../humidifier/Humidifier';
+import { useState, useEffect } from 'react';
+
 
 const TerrariumDetails = () => {
 
-    let isHumidifierOn = false;
-    let sunriseTimeType = 'AM';
-    let sunsetTimeType = 'AM'
+    const [isHumidifierOn, setIsHumidifierOn] = useState(false);
+    const [sunriseTimeType, setSunriseTimeType] = useState('AM');
+    const [sunsetTimeType, setSunsetTimeType] = useState('AM');
+
+    useEffect(() => {
+        fetch('https://catfact.ninja/fact')
+        .then(res => {  
+            return res.json();
+        })
+        .then((data) => {
+             setIsHumidifierOn(true);
+        })
+    }, []);
 
     return (  
         <div className='terrarium-details-container'>
@@ -102,17 +114,17 @@ const TerrariumDetails = () => {
 
             <div id='sunrise-set' className='details-item'>
                 <h2 className='details-item__title'>Sunrise time</h2>
-                <TimePicker componentName={'sunrise-time'} changeTimeType={value => {sunriseTimeType = value}} />
+                <TimePicker componentName={'sunrise-time'} changeTimeType={setSunriseTimeType} timeType={sunriseTimeType} />
             </div>
 
             <div id='sunset-set' className='details-item'>
                 <h2 className='details-item__title'>Sunset time</h2>
-                <TimePicker componentName={'sunset-time'} changeTimeType={value => {sunsetTimeType = value}} />
+                <TimePicker componentName={'sunset-time'} changeTimeType={setSunsetTimeType} timeType={sunsetTimeType}/>
             </div>
 
             <div id='humidifier-set' className='details-item'>
                 <h2 className='details-item__title'>Humidifier</h2>
-                <Humidifier changeIsHumidifierOn={value => {isHumidifierOn = value}} isHumidifierOn={isHumidifierOn}/>
+                <Humidifier changeIsHumidifierOn={setIsHumidifierOn}  isHumidifierOn={isHumidifierOn} />
             </div>
 
         </div>

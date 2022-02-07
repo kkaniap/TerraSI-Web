@@ -5,13 +5,6 @@ import { useState, useEffect } from 'react';
 
 const TimePicker = (props) => {
 
-    const [timeType, setTimeType] = useState('AM');
-
-    const changeTimeType = (value) => {
-        props.changeTimeType(value);
-        setTimeType(value);
-    }
-
     const hoursValidation = (e) => {
         if(e.target.value > 12 || e.target.value < 0){
             e.target.classList.add('time-picker-error');
@@ -33,7 +26,7 @@ const TimePicker = (props) => {
     }
 
     useEffect(() => {
-        if(timeType == 'AM'){
+        if(props.timeType == 'AM'){
             document.querySelector('#time-picker-' + props.componentName + ' #time-am').classList.add('time-type--selected');
             document.querySelector('#time-picker-' + props.componentName + ' #time-pm').classList.remove('time-type--selected');
         }
@@ -41,7 +34,7 @@ const TimePicker = (props) => {
             document.querySelector('#time-picker-' + props.componentName + ' #time-pm').classList.add('time-type--selected');
             document.querySelector('#time-picker-' + props.componentName + ' #time-am').classList.remove('time-type--selected');
         }
-    }, [timeType]);
+    }, [props.timeType]);
 
     return ( 
         <div id={'time-picker-' + props.componentName} className='time-picker-container'>
@@ -57,8 +50,8 @@ const TimePicker = (props) => {
                 <IoIosArrowDown />
             </div>
             <div className='time-type'>
-                <button id='time-am' onClick={() => changeTimeType('AM')}>AM</button>
-                <button id='time-pm' onClick={() => changeTimeType('PM')}>PM</button>
+                <button id='time-am' onClick={() => props.changeTimeType('AM')}>AM</button>
+                <button id='time-pm' onClick={() => props.changeTimeType('PM')}>PM</button>
             </div>
         </div>
      );
