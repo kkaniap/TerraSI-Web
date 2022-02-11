@@ -1,12 +1,14 @@
 import './TerrariumDetails.css';
 import GaugeChart from 'react-gauge-chart'
 import {BsGearFill} from 'react-icons/bs';
+import {MdClose} from 'react-icons/md';
 import CircularSlider from 'advanced-react-circular-slider';
 import 'advanced-react-circular-slider/main.css';
 import TimePicker from '../timePicker/TimePicker';
 import Humidifier from '../humidifier/Humidifier';
 import { useState, useEffect } from 'react';
 import BounceLoader from 'react-spinners/BounceLoader';
+import TemperatureSettings from '../temperatureSettings/TemperatureSettings';
 
 const TerrariumDetails = () => {
 
@@ -14,6 +16,7 @@ const TerrariumDetails = () => {
     const [isHumidifierOn, setIsHumidifierOn] = useState(false);
     const [sunriseTimeType, setSunriseTimeType] = useState('AM');
     const [sunsetTimeType, setSunsetTimeType] = useState('AM');
+    const [isSettingsOpen, setIsSettingsOpen] = useState(false);
 
     useEffect(() => {
         fetch('https://catfact.ninja/fact')
@@ -25,6 +28,23 @@ const TerrariumDetails = () => {
         })
     }, []);
 
+    useEffect(() => {
+        const settingsContainer = document.getElementById('settings-container');
+        const settingsModal = document.getElementById('settings-modal');
+
+        if(settingsContainer == null || settingsModal == null) return;
+
+        if(isSettingsOpen ){
+            settingsContainer.classList.add('settings-container--open');
+            settingsModal.classList.add('settings-modal--open');
+        }
+        else {
+            settingsContainer.classList.remove('settings-container--open');
+            settingsModal.classList.remove('settings-modal--open');
+        }
+
+    }, [isSettingsOpen])
+
     if(isLoading){
         return (
             <div className='terrarium-details-container'>
@@ -35,8 +55,16 @@ const TerrariumDetails = () => {
     else {
         return (  
             <div className='terrarium-details-container'>
+
+                <div id='settings-container' className='settings-container'>
+                    <div id='settings-modal' className='settings-modal'>
+                    <button  className='close-btn' onClick={() => setIsSettingsOpen(false)}><MdClose /></button>
+                        <TemperatureSettings />
+                    </div>
+                </div>
+
                 <div id='temperature-get' className='details-item'>
-                    <button className='gear-btn' ><BsGearFill /></button>
+                    <button className='gear-btn' onClick={() => setIsSettingsOpen(true)}><BsGearFill /></button>
                     <h2 className='details-item__title'>Temperature</h2>
                     <GaugeChart 
                         id="temperature-gauge"

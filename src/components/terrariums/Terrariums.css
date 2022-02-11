@@ -77,11 +77,17 @@
     font-weight: bold;
 }
 
+.change-name h3{
+    margin: .5em 0;
+    font-size: 1em;
+}
+
+
 .change-name input[type=text] {
     width: 70%;
     height: 3em;
     padding: 12px 20px;
-    margin: 8px 0;
+    margin: 0;
     display: inline-block;
     border: 1px solid #bebebe;
     border-radius: 4px;
@@ -94,6 +100,7 @@
 }
 
 .save-btn{
+    margin: 1em 0;
     width: 70%;
     height: 3em;
     border: 1px solid #bebebe;

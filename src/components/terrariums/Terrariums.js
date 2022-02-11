@@ -3,6 +3,7 @@ import {BsGearFill} from 'react-icons/bs';
 import {MdClose} from 'react-icons/md';
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
+import Switch from "react-switch";
 
 const Terrariums = () => {
 
@@ -38,7 +39,13 @@ const Terrariums = () => {
                 <div id='change-name' className='change-name'>
                     <button className='close-btn' onClick={() => setChangeNameOpen(false)}><MdClose /></button>
                     <p>{ errorMessage }</p>
+                    <h3>Name:</h3>
                     <input type="text" id="terrarium-name" name="terrarium-name" />
+                    <h3>Auto managment</h3>
+                    <Switch
+                        onChange={() => {}}
+                        checked={true}
+                    />
                     <button className='save-btn' onClick={() => valideTerrariumName()}> Save </button>
                 </div>
             </div>
